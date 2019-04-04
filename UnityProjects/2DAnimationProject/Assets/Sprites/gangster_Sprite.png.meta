@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 4523f519bb6d0e241aa6c2b438412b54
+timeCreated: 1523640325
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: gangster_Sprite_0
+    21300002: gangster_Sprite_1
+    21300004: gangster_Sprite_2
+    21300006: gangster_Sprite_3
+    21300008: gangster_Sprite_4
+    21300010: gangster_Sprite_5
+    21300012: gangster_Sprite_6
+    21300014: gangster_Sprite_7
+    21300016: gangster_Sprite_8
+    21300018: gangster_Sprite_9
+    21300020: gangster_Sprite_10
+    21300022: gangster_Sprite_11
+    21300024: gangster_Sprite_12
+    21300026: gangster_Sprite_13
+    21300028: gangster_Sprite_14
+    21300030: gangster_Sprite_15
+    21300032: gangster_Sprite_16
+    21300034: gangster_Sprite_17
+    21300036: gangster_Sprite_18
+    21300038: gangster_Sprite_19
+    21300040: gangster_Sprite_20
+    21300042: gangster_Sprite_21
+    21300044: gangster_Sprite_22
+    21300046: gangster_Sprite_23
+    21300048: gangster_Sprite_24
+    21300050: gangster_Sprite_25
+    21300052: gangster_Sprite_26
+    21300054: gangster_Sprite_27
+    21300056: gangster_Sprite_28
+    21300058: gangster_Sprite_29
+    21300060: gangster_Sprite_30
+    21300062: gangster_Sprite_31
+    21300064: gangster_Sprite_32
+    21300066: gangster_Sprite_33
+    21300068: gangster_Sprite_34
+    21300070: gangster_Sprite_35
+    21300072: gangster_Sprite_36
+    21300074: gangster_Sprite_37
+    21300076: gangster_Sprite_38
+    21300078: gangster_Sprite_39
+    21300080: gangster_Sprite_40
+    21300082: gangster_Sprite_41
+    21300084: gangster_Sprite_42
+    21300086: gangster_Sprite_43
+    21300088: gangster_Sprite_44
+    21300090: gangster_Sprite_45
+    21300092: gangster_Sprite_46
+    21300094: gangster_Sprite_47
+    21300096: gangster_Sprite_48
+    21300098: gangster_Sprite_49
+    21300100: gangster_Sprite_50
+    21300102: gangster_Sprite_51
+    21300104: gangster_Sprite_52
+    21300106: gangster_Sprite_53
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gangster_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 686
+        width: 54
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 686
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 685
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 688
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 687
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 766
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 755
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 753
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 753
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 755
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 753
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 689
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 742
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 744
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 744
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 744
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 744
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 681
+        width: 101
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 565
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_19
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 568
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_20
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 557
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_21
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 561
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_22
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 585
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 561
+        width: 54
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_24
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 555
+        width: 87
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_25
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 425
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_26
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 419
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_27
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 419
+        width: 51
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_28
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 419
+        width: 48
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_29
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 421
+        width: 59
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_30
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 421
+        width: 47
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_31
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 421
+        width: 51
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_32
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 423
+        width: 68
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_33
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 288
+        width: 66
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_34
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 290
+        width: 79
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_35
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 289
+        width: 56
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_36
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 287
+        width: 60
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_37
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 288
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_38
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 288
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_39
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 159
+        width: 56
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_40
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 158
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_41
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 160
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_42
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 158
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_43
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 155
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_44
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 180
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_45
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 152
+        width: 107
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_46
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_47
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 37
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_48
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 25
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_49
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 27
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_50
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 43
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_51
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 27
+        width: 56
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_52
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 24
+        width: 89
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gangster_Sprite_53
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 22
+        width: 80
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
