@@ -1,0 +1,100 @@
+﻿<Window x:Class="Mp3Player.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mp3Player"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="Music Player" Height="700" Width="1200" Background="#111" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid Height="50" Margin="310,0,0,650" MouseDown="Grid_MouseDown" Background="#222">
+            <Border BorderThickness="0 0 0 1" BorderBrush="#eee" />
+            <Label Content="  Paw Music Player" HorizontalAlignment="Left" Height="50" Width="745" FontSize="24" FontWeight="Bold" Foreground="#eee" VerticalAlignment="Center"/>
+            <Button Name="btnClose" HorizontalAlignment="Left" Margin="840,5,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="BtnClose_Click" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="Images/TopButtons/cancel.png" />
+            </Button>
+            <Button Name="btnMaximize" HorizontalAlignment="Left" Margin="795,5,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="Images/TopButtons/maximize.png"/>
+            </Button>
+            <Button Name="btnMinimize" HorizontalAlignment="Left" Margin="750,5,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="BtnMinimize_Click" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="Images/TopButtons/minimize.png"/>
+            </Button>
+        </Grid>
+
+        <Grid Width="300" Margin="10,10,890,10">
+            <Border BorderBrush="#eee" BorderThickness="0 0 1 0" Margin="0,-15,0,-14"/>
+            <Grid Height="100" Width="100" Margin="72,10,128,570">
+                <Border BorderBrush="#eee" BorderThickness="1"/>
+                <Image Name="AlbumImage" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Images/music.png" OpacityMask="Black" />
+            </Grid>
+            <Label Name="lblCurrentlyPlatying" Content="Song &#10;Artist " HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Width="280" Foreground="#FFD4D4D4" Height="48"/>
+
+            <TreeView Name="TreeList" HorizontalAlignment="Left" Height="342" Margin="10,328,0,0" VerticalAlignment="Top" Width="280" Background="Transparent" BorderThickness="0" SelectedItemChanged="TreeList_SelectedItemChanged">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Path=Albums}">
+                        <TextBlock Text="{Binding Path=ArtistName}" Foreground="#ef3e7e" />
+                        <HierarchicalDataTemplate.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=AlbumName}" Foreground="#f1558d" />
+                            </DataTemplate>
+                        </HierarchicalDataTemplate.ItemTemplate>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </Grid>
+
+        <ListView HorizontalAlignment="Left" Height="635" Margin="315,55,0,0" VerticalAlignment="Top" Width="875" Name="SongsList" Background="Transparent" BorderThickness="0" Foreground="#f1558d">
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="Track" Width="Auto" DisplayMemberBinding="{Binding Path=Track}"/>
+                    <GridViewColumn Header="Song" Width="Auto" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Length" Width="Auto" DisplayMemberBinding="{Binding Path=Duration, StringFormat='{}{0:mm\\:ss}'}"/>
+                    <GridViewColumn Header="Artist" Width="Auto" DisplayMemberBinding="{Binding Path=ArtistName}"/>
+                    <GridViewColumn Header="Album" Width="Auto" DisplayMemberBinding="{Binding Path=AlbumName}"/>
+                    <GridViewColumn Header="Genre" Width="Auto" DisplayMemberBinding="{Binding Path=Genre}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Name="btnPlay" HorizontalAlignment="Left" Margin="134,190,0,0" VerticalAlignment="Top" Width="50" Click="BtnPlay_Click" Background="Transparent" BorderBrush="Transparent" ToolTip="Play" >
+            <Image Name="imgPlay" Source="Images/play.png"/>
+        </Button>
+        <Button Name="btnStop" HorizontalAlignment="Left" Margin="34,192,0,0" VerticalAlignment="Top" Width="45" Click="BtnStop_Click" ToolTip="Stop" Background="Transparent" BorderBrush="Transparent">
+            <Image Source="Images/stop.png" />
+        </Button>
+        <Button Name="Backward" HorizontalAlignment="Left" Margin="84,192,0,0" VerticalAlignment="Top" Width="45" Click="Backward_Click" ToolTip="Previous" Background="Transparent" BorderBrush="Transparent">
+            <Image Source="Images/next.PNG" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <ScaleTransform ScaleX="-1"/>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+        <Button Name="Forward" HorizontalAlignment="Left" Margin="189,192,0,0" VerticalAlignment="Top" Width="45" Click="Forward_Click" ToolTip="Next" Background="Transparent" BorderBrush="Transparent">
+            <Image Source="Images/next.png" />
+        </Button>
+        <Button Name="btnRepeat" HorizontalAlignment="Left" Margin="246,78,0,0" Height="50" VerticalAlignment="Top" ToolTip="Repeat" Background="Transparent" BorderBrush="Transparent" Click="BtnRepeat_Click">
+            <Image Name="imgRepeat" Source="Images/repeat.png"/>
+        </Button>
+        <Button Name="btnShuffle" HorizontalAlignment="Left" Margin="246,10,0,0" Height="50" VerticalAlignment="Top" ToolTip="Shuffle" Background="Transparent" BorderBrush="Transparent" Click="BtnShuffle_Click">
+            <Image Name="imgShuffle" Source="Images/shuffle.png"/>
+        </Button>
+        <Button Name="btnVolume" HorizontalAlignment="Left" Margin="10,286,0,0" Height="40" VerticalAlignment="Top" ToolTip="Volume on/off" Background="Transparent" BorderBrush="Transparent" Click="BtnVolume_Click" >
+            <Image Name="imgVolume" Source="Images/volumeOn.png"/>
+        </Button>
+
+        <ProgressBar Name="MusicProgress" HorizontalAlignment="Left" Height="6" Margin="16,248,0,0" VerticalAlignment="Top" Width="276" MouseLeftButtonDown="MusicProgress_MouseLeftButtonDown" Foreground="#ed266e" Background="#333" RenderTransformOrigin="0.5,0.5">
+        </ProgressBar>
+        <Slider Name="sliderVolume" HorizontalAlignment="Left" Margin="55,297,0,0" VerticalAlignment="Top" Width="241" IsMoveToPointEnabled="True" ValueChanged="SliderVolume_ValueChanged" />
+
+        <Label Name="lblSongPlayTime" Content="00:00" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Foreground="#FFD8D8D8" Width="40"/>
+        <Label Name="lblSongTimer" Content="00:00" HorizontalAlignment="Left" Margin="258,255,0,0" VerticalAlignment="Top" Foreground="#FFD8D8D8" Width="40"/>
+
+    </Grid>
+</Window>
