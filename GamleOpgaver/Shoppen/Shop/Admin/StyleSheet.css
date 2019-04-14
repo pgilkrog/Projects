@@ -1,0 +1,25 @@
+﻿body 
+{	
+	text-align: center;
+	background-image: url(Image/Top.gif);
+	background-repeat: repeat-x;
+}
+
+
+/* Masterpage */
+.Wrapper
+{
+	width: 975px;
+	margin: auto;
+	height: auto;
+}
+
+.top 
+{
+	height: 80px;
+}
+	
+.content
+{
+	text-align: center;
+}

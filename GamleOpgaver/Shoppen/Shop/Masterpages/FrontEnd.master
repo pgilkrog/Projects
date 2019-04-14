@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEnd.master.cs" Inherits="Masterpages_FrontEnd" %>
+
+<%@ Register src="../Usercontrols/Menu.ascx" tagname="Menu" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Wrapper">
+        <div class="Top">
+            <div style="float: right; margin-right: 20px;">
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </div>            
+                <div style="float: right; margin-right: -40px; margin-top: 120px;">    
+                    Søg efter tv: <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" onclick="btnSearch_Click" />
+                </div>
+        </div>
+
+            <div class="Content">
+                <div class="Menu">
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Products/Default.aspx" Text="Products" 
+                                Value="Products"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <uc1:Menu ID="Menu2" runat="server" />
+                    <br />
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="Admin">
+                                <ContentTemplate>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/Default.aspx">Admin</asp:HyperLink>
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                            <asp:RoleGroup Roles="User">
+                                <ContentTemplate>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login/ManageAccount.aspx">Manage Account</asp:HyperLink>
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                        </RoleGroups>
+                    </asp:LoginView>
+                </div>
+                <div style="float: left; margin-top: 10px;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                <br /><br /></div></div>
+            <div class="Bottom"></div>
+    </div>
+    </form>
+</body>
+</html>

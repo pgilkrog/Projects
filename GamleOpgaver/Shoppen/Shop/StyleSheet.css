@@ -1,0 +1,156 @@
+﻿body 
+{
+	margin-top: 0px;
+	text-align: center;
+	background-color: #cccccc;
+}
+
+
+
+/* MasterPage */
+.Wrapper
+{
+	width: 975px;
+	margin: auto;
+	height: auto;
+}
+
+.Top
+{
+	background-image: url(Images/Design/Top.gif);
+	float:left;
+	width: 975px;
+	height: 150px;
+}
+
+.Menu
+{
+	float: left;
+	margin-left: 13px;
+	margin-top: 10px;
+	width: 150px;
+	min-height: 300px;	
+}
+
+.MenuLinks
+{
+	
+}
+
+.Content
+{
+	background-image: url(Images/Design/Content.gif);
+	background-repeat: repeat-y;
+	float: left;
+	text-align: left;
+	width: 975px;
+	height: auto;
+}
+
+.Bottom
+{
+	background-image: url(Images/Design/Bottom.gif);
+	Float: left;
+	width: 975px;
+	height: 50px;
+}
+
+/* Masterpage end */
+
+
+/* Links */
+A:link 
+{
+	font-family: Arial;
+	text-decoration: none;
+    Color: Black;
+    font-size: 14px;
+}
+
+A:visited 
+{
+	font-family: Arial;
+	text-decoration: none;
+	color: Black;
+	font-size: 14px;
+}
+
+A:active 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: Black;
+	font-size: 14px;
+}
+
+A:hover 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: Gray;
+	font-size: 14px;
+} 
+
+.Menu A:link 
+{
+	font-family: Arial;
+	text-decoration: none;
+    Color: Black;
+    font-size: 16px;
+}
+
+.Menu A:visited 
+{
+	font-family: Arial;
+	text-decoration: none;
+	color: Black;
+	font-size: 16px;
+}
+
+.Menu A:active 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: Black;
+	font-size: 16px;
+}
+
+.Menu A:hover 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: #555555;
+	font-size: 16px;
+} 
+/* Links end */
+
+
+
+/* StarRating */
+.StarRating
+{
+	font-size: 0pt;   
+	width: 16px;   
+	height: 16px;   
+	margin: 0px;   
+	padding: 0px;     
+	cursor: pointer;
+	display: block;   
+	background-repeat: no-repeat;   
+}
+
+.EmptyRatingStar
+{
+	Background-image: url(Images/GreyStar.gif);
+}
+
+.FilledRatingStar
+{
+	Background-image: url(Images/GoldStar.gif);
+}
+/* StarRating End */
+
+.Style1
+{
+	width: 120px;	
+}

@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEnd.master.cs" Inherits="FrontEnd" %>
+
+<%@ Register src="Usercontrols/Menu.ascx" tagname="Menu" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Computer Store</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Wrapper">
+        <div class="Top">
+            <div class="TopItems">
+                <p style="color: #FFFFFF">Browse by Manufactore
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" 
+                        onselectedindexchanged="DropDownList1_SelectedIndexChanged" 
+                        DataSourceID="objDropDown" DataTextField="Name" DataValueField="Name">
+                </asp:DropDownList>
+                    <asp:ObjectDataSource ID="objDropDown" runat="server" 
+                        SelectMethod="GetDropDown" TypeName="DropDownBLL"></asp:ObjectDataSource>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                SiteSearch
+                <asp:TextBox ID="tbSearch" runat="server"></asp:TextBox>
+                <asp:Button ID="btnSearch" runat="server" Text="Search" onclick="btnSearch_Click" /></p>
+            </div>
+        </div>
+            <div class="LogoBanner">
+                <div class="BannerItems">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="Images/Design/BannerLogo.gif" />
+                        <div style="float:right; margin-left: 330px;">
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home |</asp:HyperLink>
+                            </td>
+                            <td>
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Contact.aspx">Contact |</asp:HyperLink>
+                            </td>
+                            <td>
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AboutUs.aspx">AboutUs</asp:HyperLink>
+                            </td>
+                        </tr>
+                    </table>
+                        </div>
+                </div>
+            </div>
+            <div class="GrayLine"></div>
+            <div class="Back">
+                <div class="LeftBox">
+                    <div class="LeftBoxItems">
+                        <uc1:Menu ID="Menu1" runat="server" />
+                            <br />
+                    </div>                        
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Sidepic.jpg" />
+                        <div style="margin-left: 10px;">
+                    <asp:FormView ID="FormView1" runat="server" DataSourceID="objInfo" DataKeyNames="InfoID">
+                        <ItemTemplate>
+                            <p>
+                            <asp:Label ID="NameLabel" runat="server" Text='<%# Bind("Name") %>' />
+                                <br />
+                            <asp:Label ID="AddressLabel" runat="server" Text='<%# Bind("Address") %>' />
+                                <br />
+                            <asp:Label ID="Zip_CodeLabel" runat="server" Text='<%# Bind("ZipCode") %>' />
+                            <asp:Label ID="CityLabel" runat="server" Text='<%# Bind("City") %>' />
+                                <br />
+                            Phone:
+                            <asp:Label ID="PhoneLabel" runat="server" Text='<%# Bind("Phone") %>' />
+                            <br />
+                            Fax:
+                            <asp:Label ID="FaxLabel" runat="server" Text='<%# Bind("Fax") %>' />
+                            <br />
+                            <asp:Label ID="EmailLabel" runat="server" Text='<%# Bind("Email") %>' />
+                            <br /></p>
+                        </ItemTemplate>
+                    </asp:FormView>
+                    <asp:ObjectDataSource ID="objInfo" runat="server" 
+                        OldValuesParameterFormatString="original_{0}" SelectMethod="GetInfo" 
+                        TypeName="InfoBLL"></asp:ObjectDataSource>
+                        </div>
+                </div>
+                    <div class="Content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                    </div>
+                        <div class="RightBox">
+                            <div class="RightBoxItems">
+                                <asp:LoginView ID="LoginView1" runat="server">
+                                    <RoleGroups>
+                                        <asp:RoleGroup Roles="Admin">
+                                            <ContentTemplate>
+                                                <div class="GrayBox"><div class="LittleMenu">Admin</div></div><br />
+                                                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/Default.aspx">Gå til Admin side</asp:HyperLink><br /><br />
+                                                <i><b><asp:LoginStatus ID="LoginStatus1" runat="server" /></b></i>
+                                            </ContentTemplate>
+                                        </asp:RoleGroup>
+                                        <asp:RoleGroup Roles="User">
+                                            <ContentTemplate>
+                                                <div class="GrayBox"><div class="LittleMenu">User</div></div>
+                                                    <p>
+                                                        Velkommen <asp:LoginName ID="LoginName1" runat="server" />
+                                                    </p>
+                                                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Login/ManageAccount.aspx">Manage Account</asp:HyperLink><br /><br />
+                                                <i><b><asp:LoginStatus ID="LoginStatus1" runat="server" /></b></i>
+                                            </ContentTemplate>
+                                        </asp:RoleGroup>
+                                    </RoleGroups>
+                                    <AnonymousTemplate>
+                                        <asp:Login ID="Login1" runat="server" FailureAction="RedirectToLoginPage">
+                                <LayoutTemplate>
+                                    <div class="GrayBox"><div class="LittleMenu">Login</div></div>
+                                    <p><asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
+                                    
+                                    <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
+                                        ControlToValidate="UserName" ErrorMessage="User Name is required." 
+                                        ToolTip="User Name is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator></p>
+
+                                    <p><asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+
+                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
+                                        ControlToValidate="Password" ErrorMessage="Password is required." 
+                                        ToolTip="Password is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator><br /><br />
+
+                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." /></p>
+
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" 
+                                        ValidationGroup="ctl00$Login1" />
+                                </LayoutTemplate>
+                            </asp:Login>
+                                    </AnonymousTemplate>
+                                </asp:LoginView>
+                                                       
+                            <div class="GrayBox"><div class="LittleMenu">Newest Products</div></div>
+                            
+                                <asp:DataList ID="DataList1" runat="server" DataKeyField="ProductID" 
+                                    DataSourceID="objNewest">
+                                    <ItemTemplate>
+                                    <ul>
+                                        <li>
+                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%# Eval("ProductID", "~/Products/ProductDetail.aspx?ProductID={0}") %>' Text='<%# Eval("Name") %>'></asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            
+                                <asp:ObjectDataSource ID="objNewest" runat="server" 
+                                    SelectMethod="GetProductsByNewest" TypeName="ProductsBLL">
+                                </asp:ObjectDataSource>
+                            
+                            <div class="GrayBox"><div class="LittleMenu">Most Popular Products</div></div>
+                            
+                                <asp:DataList ID="DataList2" runat="server" DataKeyField="ProductID" 
+                                    DataSourceID="objPopular">
+                                    <ItemTemplate>
+                                     <ul>
+                                        <li>
+                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%# Eval("ProductID", "~/Products/ProductDetail.aspx?ProductID={0}") %>' Text='<%# Eval("Name") %>'></asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            
+                                <asp:ObjectDataSource ID="objPopular" runat="server" 
+                                    SelectMethod="GetProductByPopular" TypeName="ProductsBLL">
+                                </asp:ObjectDataSource>
+                            
+                            </div>
+                        </div>
+        </div>
+        <div class="Bottom"></div>
+    </div>
+    </form>
+</body>
+</html>

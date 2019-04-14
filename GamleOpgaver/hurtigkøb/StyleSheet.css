@@ -1,0 +1,122 @@
+﻿body {
+}
+
+.tekstbox {
+	Position: absolute;
+	height: 570px;
+	width: 470px;
+	overflow: auto;
+	}
+	
+.shopbox {
+	Position: absolute;
+	height: 570px;
+	width: 1248px;
+	overflow: auto;
+	}
+	
+.undermenu {
+	position: absolute; 
+	top: -27px;
+	left: 300px;
+	}
+
+.box {
+	Position: absolute;
+	top: 205px;
+	left: 30px;
+	}
+	
+.linkbox {
+	Position: absolute;
+	top: 133px;
+	left: 200px;
+	width: 900px;
+	}
+	
+.shopbillede {
+	position: absolute;
+	top: -3px;
+	left: -7px;
+	}
+	
+.tilbud {
+	position: absolute;
+	top: 10px;
+	left: 650px;
+	}
+	
+.tilbudbil {
+	position: absolute;
+	top: -5px;
+	left: 545px;
+	width: 700px;
+	overflow: hidden;
+	}
+	
+.login {
+	Position: absolute;
+	top: 20px;
+	left: 1030px;
+}
+	
+h1 {
+	text-align: center; 
+	font-family: Arial;	
+	}
+	
+h3 {
+	text-align: center;
+	font-family: Arial;	
+	}
+	
+p {
+	font-family: Arial;	
+	font-size: 14px;
+	}
+	
+.fødevarer {
+	position: absolute; 
+	top: -27px;
+	left: 450px;
+	}
+	
+.hygiejne {
+	position: absolute; 
+	top: -27px;
+	left: 650px;
+	}
+	
+.Ting {
+	position: absolute; 
+	top: -27px;
+	left: 900px;
+	}
+	
+a:link {
+	color: Black;
+	text-decoration:none;
+	font-family: arial;}
+a:visited {
+	color: Black;
+	text-decoration:none;
+	font-family: arial;}
+a:active {
+	color: Black;
+	font-family: arial; }
+	
+.linkbox a:link {
+	color: Black;
+	text-decoration:none;
+	font-family: arial;
+	font-size: 30px;}
+.linkbox a:visited {
+	color: Black;
+	text-decoration:none;
+	font-family: arial;
+	font-size: 30px;}
+.linkbox a:active {
+	color: Black;
+	font-family: arial; 
+	font-size: 30px;}
+	

@@ -1,0 +1,92 @@
+﻿body 
+{	
+	text-align: center;
+	background-image: url(Image/Top.gif);
+	background-repeat: repeat-x;
+}
+
+
+/* Masterpage */
+.Wrapper
+{
+	width: 975px;
+	margin: auto;
+	height: auto;
+}
+
+.top 
+{
+	height: 120px;
+}
+
+.Menu
+{
+	Top: 10px;	
+}
+	
+.Content
+{
+	text-align: left;
+	margin-top: 20px;
+}
+
+.MenuWidth
+{
+    width: 200px;
+}
+
+/* StarRating */
+.StarRating
+{
+	font-size: 0pt;   
+	width: 16px;   
+	height: 16px;   
+	margin: 0px;   
+	padding: 0px;     
+	cursor: pointer;
+	display: block;   
+	background-repeat: no-repeat;   
+}
+
+.EmptyRatingStar
+{
+	Background-image: url(Image/GreyStar.gif);
+}
+
+.FilledRatingStar
+{
+	Background-image: url(Image/GoldStar.gif);
+}
+
+
+A:link 
+{
+	font-family: Arial;
+	text-decoration: none;
+    Color: Black;
+    font-size: 24px;
+}
+
+A:visited 
+{
+	font-family: Arial;
+	text-decoration: none;
+	color: black;
+	font-size: 24px;
+}
+
+A:active 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: black;
+	font-size: 24px;
+}
+
+A:hover 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: black;
+	font-size: 24px;
+} 

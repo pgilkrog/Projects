@@ -1,0 +1,385 @@
+﻿body 
+{
+	margin-top: 0px;
+	background-color: Black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+ul 
+{
+	height: 2px;	
+	margin-left: -20px;
+	color: White;
+}
+
+
+/* Fonts */
+h2
+{
+	font-family: Arial;	
+}
+
+h3
+{
+	font-family: Arial;	
+	color: White;
+}
+
+p
+{
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.LittleMenu
+{
+	Text-align: center;
+	margin-top: 3px;
+	color: White;
+	font-size: 16px;	
+	font-family: Arial;
+}
+
+.RightBox p
+{
+	font-family: Arial;
+	font-size: 14px;
+	color: White;
+}
+
+.LeftBox p
+{
+	font-family: Arial;
+	font-size: 14px;
+	color: White;
+}
+/* Fonts end */
+
+
+/* Other Pages */
+.PageMenu
+{
+	float: left;
+	margin-left: 20px;
+	margin-top: -10px;	
+}
+.PageContent
+{
+	float: left;
+	margin-left: 20px; 
+	margin-right: 20px; 
+	margin-top: 10px;	
+}
+
+.GrayBox
+{
+	background-color: Gray;
+	margin-top: 20px;
+	height: 25px;
+	width: 180px;	
+}
+
+.BlackContent
+{
+	background-color: #191919;
+	float: left;
+	width: 556px;
+	height: 700px;
+}
+
+.FeaturedProducts
+{
+	background-image: url(Images/Design/bgOrange.jpg);
+	float: left;
+	height: 30px;
+	width: 556px;
+}
+
+.DetailImage
+{
+	text-align: center;
+	Float: left;
+	width: 556px;
+}
+/* Other Pages End */
+
+
+/* Masterpage */
+.Wrapper
+{
+	width: 960px;
+	margin: auto;
+	height: auto;
+}
+
+.Top
+{
+	background-color: #343539;
+	float: left;
+	height: 60px;
+	width: 960px;
+}
+
+.Back
+{
+	background-image: url(Images/Design/Back.gif);
+	float: left;
+	width: 960px;
+	height: auto;	
+	border-style: solid;
+	border-color: Black;
+	border-width: 2px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.LogoBanner
+{
+	background-image: url(Images/Design/bgOrange.jpg);
+	float: left;
+	height: 85px;
+	width: 960px;
+}
+
+.LeftBox
+{
+	background-color: #191919;
+	float: left;
+	width: 200px;
+	min-height: 690px;	
+}
+
+.RightBox
+{
+	background-color: #191919;
+	float: left;
+	width: 200px;
+	min-height: 690px;
+}
+
+.Content
+{
+	background-color: white;
+	float: left;
+	width: 556px;
+	min-height: 690px;
+	border-style: solid;
+	border-color: Black;
+	border-width: 2px;
+	border-top: none;
+	border-bottom: none;
+}
+
+.GrayContent
+{
+	background-color: Gray;
+	float: left;
+	margin-left: -1px;
+	width: 556px;	
+	height: 50px;
+	border-style: solid;
+	border-color: Black;
+	border-width: 1px;
+	border-bottom: none;
+}
+
+.Bottom
+{
+	background-image: url(Images/Design/bgOrange.jpg); 	
+	float: left;
+	width: 960px;
+	height: 20px;
+}
+
+.GrayLine
+{
+	background-color: Gray;
+	float: left;
+	width: 960px;
+	height: 5px;	
+}
+
+.TopItems
+{
+	float: right; 
+	margin-right: 20px; 
+	margin-top: 5px;
+}
+
+.BannerItems
+{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.LeftBoxItems
+{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;	
+}
+
+.RightBoxItems
+{
+	float: left;
+	margin-left: 10px;
+}
+/* Masterpage end */
+
+
+/* Links */
+A:link 
+{
+	font-family: Arial;
+	text-decoration: none;
+    Color: Black;
+    font-size: 16px;
+}
+
+A:visited 
+{
+	font-family: Arial;
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+}
+
+A:active 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: black;
+	font-size: 16px;
+}
+
+A:hover 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: black;
+	font-size: 16px;
+} 
+
+.LogoBanner A:link 
+{
+	font-family: Candara, Arial;
+	text-decoration: none;
+    Color: White;
+    font-size: 28px;
+}
+
+.LogoBanner A:visited 
+{
+	font-family: Candara, Arial;
+	text-decoration: none;
+	color: White;
+	font-size: 28px;
+}
+
+.LogoBanner A:active 
+{
+	font-family: Candara, Arial;
+	text-decoration: none; 
+	color: White;
+	font-size: 28px;
+}
+
+.LogoBanner A:hover 
+{
+	font-family: Candara, Arial;
+	text-decoration: none; 
+	color: White;
+	font-size: 28px;
+} 
+
+.RightBox A:link 
+{
+	font-family: Arial;
+	text-decoration: none;
+    Color: White;
+    font-size: 12px;
+}
+
+.RightBox A:visited 
+{
+	font-family: Arial;
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+}
+
+.RightBox A:active 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: white;
+	font-size: 12px;
+}
+
+.RightBox A:hover 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: white;
+	font-size: 12px;
+} 
+
+.LeftBox A:link 
+{
+	font-family: Arial;
+	text-decoration: none;
+    Color: White;
+    font-size: 16px;
+}
+
+.LeftBox A:visited 
+{
+	font-family: Arial;
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+
+.LeftBox A:active 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: white;
+	font-size: 16px;
+}
+
+.LeftBox A:hover 
+{
+	font-family: Arial;
+	text-decoration: none; 
+	color: white;
+	font-size: 16px;
+} 
+/* Links end */
+
+
+/* StarRating */
+.StarRating
+{
+	font-size: 0pt;   
+	width: 16px;   
+	height: 16px;   
+	margin: 0px;   
+	padding: 0px;     
+	cursor: pointer;
+	display: block;   
+	background-repeat: no-repeat;   
+}
+
+.EmptyRatingStar
+{
+	Background-image: url(Images/GreyStar.gif);
+}
+
+.FilledRatingStar
+{
+	Background-image: url(Images/GoldStar.gif);
+}
+/* StarRating End */
