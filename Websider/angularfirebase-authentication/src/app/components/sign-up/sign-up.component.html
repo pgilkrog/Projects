@@ -1,0 +1,29 @@
+<div class="centerMiddle">
+  <i class="fas fa-user-plus"></i>
+
+  <div class="box">
+    <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
+  </div>
+
+  <div class="box">
+    <input type="password" class="formControl" placeholder="Password" #userPwd required>
+  </div>
+
+  <div class="box">
+    <span>Already have an account? <span class="underlined" routerLink="/sign-in">Log In</span></span>
+  </div>
+
+  <div class="box">
+    <input type="button" class="btn btnPrimary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+  </div>
+  <br />
+  <div class="box">
+    <span class="or"><span class="orInner">Or sign up with</span></span>
+  </div>
+
+  <!-- Continue with Google or Facebook -->
+  <div class="box">
+    <i class="fab fa-google-plus-square" (click)="authService.GoogleAuth()"></i>
+    <i class="fab fa-facebook-square" (click)="authService.FacebookAuth()"></i>
+  </div>
+</div>

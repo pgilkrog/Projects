@@ -1,0 +1,26 @@
+<div class="menuWrapper">
+  <i class="fas fa-bars menuI" (click)="toggle()" *ngIf="!isExpanded"></i>
+
+  <div class="menu" *ngIf="isExpanded">
+    <i class="fas fa-times menuI" (click)="toggle()" *ngIf="isExpanded"></i>
+    <div class="nav">
+      <ul>
+        <li [routerLinkActive]='["link-active"]'>
+          <button type="button" class="menuButtons" routerLink="home" (click)="toggle()">Home</button>
+        </li>
+        <li>
+          <button type="button" class="menuButtons" routerLink="recipies-list" (click)="toggle()">Recipies</button>
+        </li>
+        <li>
+          <button type="button" class="menuButtons" routerLink="dashboard" (click)="toggle()">User Profile</button>
+        </li>
+        <li>
+          <button type="button" class="menuButtons" routerLink="uploader" (click)="toggle()">Upload</button>
+        </li>
+        <li *ngIf="authService.isLoggedIn">
+          <button type="button" class="menuButtons" (click)="authService.SignOut(); toggle()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

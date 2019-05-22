@@ -1,0 +1,16 @@
+<div class="recipeWrapper">
+  <div *ngFor="let item of recipies">
+    <p><span style="font-weight:800;">{{item.name}}:</span> {{item.description}} <button (click)="delete(item.id)">Delete</button></p>
+    
+  </div>
+
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" />
+      <br />
+    <label for="description">Description</label>
+    <input formControlName="description" id="description" />
+      <br />
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+  </form>
+</div>

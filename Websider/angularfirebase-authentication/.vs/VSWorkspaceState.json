@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\menu",
+    "\\src\\app\\components\\upload-task",
+    "\\src\\app\\components\\uploader",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\services",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\styles.css",
+  "PreviewInSolutionExplorer": false
+}

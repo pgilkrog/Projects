@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #e7ffe6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #101010;
+  width: 40vh;
+  height: 40px;
+  font-size: 20px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email] {
+  outline: none;
+}
+
+.btn {
+  background-color: #49d290;
+  width: 40vh;
+}
+
+.underlined {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.centerMiddle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
