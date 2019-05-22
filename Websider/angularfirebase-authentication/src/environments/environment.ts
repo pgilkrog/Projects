@@ -7,12 +7,12 @@ export const environment = {
   
   // Initialize Firebase
   firebase: {
-    apiKey: "AIzaSyD_1xYvOjGOgOyVx-Q4_MaVCzJX9RBNcCk",
-    authDomain: "angauthtest.firebaseapp.com",
-    databaseURL: "https://angauthtest.firebaseio.com",
-    projectId: "angauthtest",
-    storageBucket: "angauthtest.appspot.com",
-    messagingSenderId: "401909946164"
+    apiKey: "hej",
+    authDomain: "hej",
+    databaseURL: "hej",
+    projectId: "hej",
+    storageBucket: "hej",
+    messagingSenderId: "hej"
   }
 };
 
