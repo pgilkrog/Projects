@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DrinkApp.GroupPage" 
+             BackgroundColor="#32b253" 
+             Title="Grupper">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            
+            <ListView x:Name="lvGroups" 
+                      ItemsSource="{Binding Path=groups}" 
+                      VerticalOptions="Start" 
+                      HorizontalOptions="StartAndExpand"
+                      ItemSelected="LvGroups_ItemSelected"
+                      SeparatorColor="AliceBlue">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HeightRequest="100" 
+                                     Orientation="Horizontal" 
+                                     Margin="0,5,0,5">
+                                <Label Text="{Binding GroupName}" 
+                                       HorizontalOptions="StartAndExpand" 
+                                       VerticalOptions="CenterAndExpand"
+                                       FontSize="Large"
+                                       TextColor="#101010"/>
+                                <Button Clicked="btnDeleteGroup_CLicked" 
+                                        Text="Fjern" 
+                                        HorizontalOptions="End" 
+                                        FontSize="Micro"
+                                        BackgroundColor="AliceBlue"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Entry x:Name="eAddGroup" 
+                   VerticalOptions="Start"
+                   Completed="btnAddGroup_Clicked"
+                   FontSize="Large"
+                   Placeholder="Indtast gruppe navn.." />
+            <Button x:Name="btnAddGroup" 
+                    Text="Tilføj gruppe" 
+                    BackgroundColor="AliceBlue"
+                    VerticalOptions="Start"
+                    FontSize="Large"/>
+            <!--<Button x:Name="btnDeleteAll" 
+                    Text="Slet alle" 
+                    BackgroundColor="AliceBlue"
+                    VerticalOptions="End"
+                    FontSize="Large" />-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,1 @@
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp.UWP\DrinkApp.UWP.csproj;x86

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DrinkApp.GroupPeoplePage"
+             BackgroundColor="#32b253" 
+             Title="Gruppe detaljer">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <Label x:Name="lblName" 
+                   Text="Gruppe Navn"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"
+                   TextColor="#101010"/>
+            
+            <ListView x:Name="lvGroupPeople" 
+                      SeparatorColor="AliceBlue"
+                      ItemsSource="{Binding Path=GroupPeople}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HeightRequest="100" 
+                                     Orientation="Horizontal" 
+                                     Margin="0,5,0,5">
+                                <Label Text="{Binding Name}" 
+                                       HorizontalOptions="StartAndExpand" 
+                                       VerticalOptions="CenterAndExpand"
+                                       FontSize="Large"
+                                       TextColor="#101010"/>
+                                <Button x:Name="btnDelete" 
+                                        Clicked="btnDelete_Clicked" 
+                                        Text="Fjern" 
+                                        FontSize="Micro"
+                                        HorizontalOptions="End"
+                                        BackgroundColor="AliceBlue"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Entry x:Name="eAddPerson"
+                   Completed="btnAddPerson_Clicked"
+                   FontSize="Large"
+                   Placeholder="Indtast person navn.."/>
+            <Button x:Name="btnAddPerson" 
+                    Text="Tilføj Person"
+                    BackgroundColor="AliceBlue"
+                    FontSize="Large"/>
+            <Button x:Name="btnRaffle" 
+                    Text="Raffle!"
+                    BackgroundColor="AliceBlue"
+                    FontSize="Large"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

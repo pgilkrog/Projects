@@ -1,0 +1,15 @@
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\bin\Debug\netstandard2.0\DrinkApp.deps.json
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\bin\Debug\netstandard2.0\DrinkApp.dll
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\bin\Debug\netstandard2.0\DrinkApp.pdb
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\DrinkApp.csproj.CoreCompileInputs.cache
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\DrinkApp.AssemblyInfoInputs.cache
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\DrinkApp.AssemblyInfo.cs
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\DrinkApp.dll
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\DrinkApp.pdb
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\WinnerDetail.xaml.g.cs
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\DrinkApp.csprojAssemblyReference.cache
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\GroupPage.xaml.g.cs
+C:\Users\pgilk\source\repos\DrinkApp\DrinkApp\DrinkApp\obj\Debug\netstandard2.0\GroupPeoplePage.xaml.g.cs
