@@ -3,20 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DrinkApp"
              x:Class="DrinkApp.MainPage"
-             BackgroundColor="#32b253" 
+             BackgroundColor="#243d44" 
              Title="Hvem skal gi'?">
 
     <StackLayout Margin="5">
         <Entry x:Name="enName" 
                FontSize="Large"
                Placeholder="Skriv navn her.." 
-               Completed="Clicked_Button" />
+               Completed="Clicked_Button" 
+               TextColor="#eeeeee"/>
         <Button x:Name="btnEnter" FontSize="Large"
                Text="Tilføj Person" 
-               BackgroundColor="AliceBlue" />
+               BackgroundColor="#2dea8f" />
         <Button x:Name="btnRandom" FontSize="Large"
                Text="Raffle!" 
-               BackgroundColor="AliceBlue" />
+               BackgroundColor="#2dea8f" />
 
         <ListView x:Name="lvPersons" 
                   ItemsSource="{Binding Path=People}" 
@@ -29,7 +30,7 @@
                                      Orientation="Horizontal" 
                                      Margin="0,5,0,5">
                             <Label Text="{Binding Name}"
-                                TextColor="#101010" 
+                                TextColor="#eeeeee" 
                                 FontSize="Large" 
                                 VerticalOptions="CenterAndExpand" 
                                 HorizontalOptions="StartAndExpand" />
@@ -37,7 +38,7 @@
                                 Clicked="DeleteButton_OnClicked" 
                                 Text="Fjern" 
                                 FontSize="Micro"
-                                BackgroundColor="AliceBlue"
+                                BackgroundColor="#2dea8f"
                                 WidthRequest="80"
                                 HorizontalOptions="End" />
                         </StackLayout>
@@ -46,7 +47,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:Name="btnGroups" Text="Grupper" FontSize="Large" BackgroundColor="AliceBlue"/>
+        <Button x:Name="btnGroups" Text="Grupper" FontSize="Large" BackgroundColor="#2dea8f"/>
 
     </StackLayout>
 </ContentPage>

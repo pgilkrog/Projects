@@ -13,8 +13,8 @@ namespace DrinkApp
 
             MainPage = new NavigationPage(new MainPage())
             {
-                BarBackgroundColor = Color.FromHex("#00502a"),
-                BarTextColor = Color.White
+                BarBackgroundColor = Color.FromHex("#12B868"),
+                BarTextColor = Color.FromHex("#ffffff")
             };
         }
 

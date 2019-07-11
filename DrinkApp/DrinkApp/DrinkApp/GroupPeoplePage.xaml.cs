@@ -26,6 +26,7 @@ namespace DrinkApp
             pCL = new PersonController();
             winnerDetail = new WinnerDetail();
             Group = new Group();
+            eAddPerson.Text = "";
 
             btnAddPerson.Clicked += btnAddPerson_Clicked;
             btnRaffle.Clicked += btnRaffle_Clicked;
@@ -40,13 +41,20 @@ namespace DrinkApp
 
         public void btnAddPerson_Clicked(object sender, EventArgs e)
         {
-            Person p = new Person();
-            p.Name = eAddPerson.Text;
-            p.GroupId = Group.Id;
-            pCL.InsertPerson(p);
-            ResetListView();
-            eAddPerson.Text = "";
-            eAddPerson.Focus();
+            if (eAddPerson.Text != "")
+            {
+                Person p = new Person();
+                p.Name = eAddPerson.Text;
+                p.GroupId = Group.Id;
+                pCL.InsertPerson(p);
+                ResetListView();
+                eAddPerson.Text = "";
+                eAddPerson.Focus();
+            }
+            else
+            {
+                DisplayAlert("Advarsel!", "Navnet på personen er ikke gyldigt.", "Ok");
+            }
         }
 
         public void btnRaffle_Clicked(object sender, EventArgs e)
@@ -62,12 +70,18 @@ namespace DrinkApp
             }
         }
 
-        public void btnDelete_Clicked(object sender, EventArgs e)
+        public async void btnDelete_Clicked(object sender, EventArgs e)
         {
             var button = sender as Button;
             var person = button?.BindingContext as Person;
-            pCL.DeletePerson(person);
-            ResetListView();
+
+            var warningPerson = await DisplayAlert("Advarsel!", "Vil du fjerne " + person.Name+ "?", "Ja", "Nej");
+
+            if(warningPerson == true)
+            {
+                pCL.DeletePerson(person);
+                ResetListView();
+            }
         }
 
         public void ResetListView()

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DrinkApp.GroupPage" 
-             BackgroundColor="#32b253" 
+             BackgroundColor="#243d44" 
              Title="Grupper">
     <ContentPage.Content>
         <StackLayout Margin="5">
@@ -23,12 +23,12 @@
                                        HorizontalOptions="StartAndExpand" 
                                        VerticalOptions="CenterAndExpand"
                                        FontSize="Large"
-                                       TextColor="#101010"/>
+                                       TextColor="#eeeeee"/>
                                 <Button Clicked="btnDeleteGroup_CLicked" 
                                         Text="Fjern" 
                                         HorizontalOptions="End" 
                                         FontSize="Micro"
-                                        BackgroundColor="AliceBlue"/>
+                                        BackgroundColor="#2dea8f"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -39,10 +39,11 @@
                    VerticalOptions="Start"
                    Completed="btnAddGroup_Clicked"
                    FontSize="Large"
+                   TextColor="#eeeeee"
                    Placeholder="Indtast gruppe navn.." />
             <Button x:Name="btnAddGroup" 
                     Text="Tilføj gruppe" 
-                    BackgroundColor="AliceBlue"
+                    BackgroundColor="#2dea8f"
                     VerticalOptions="Start"
                     FontSize="Large"/>
             <!--<Button x:Name="btnDeleteAll" 

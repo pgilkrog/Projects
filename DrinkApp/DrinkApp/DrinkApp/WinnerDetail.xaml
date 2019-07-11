@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DrinkApp.WinnerDetail"
-             BackgroundColor="#32b253" 
+             BackgroundColor="#243d44" 
              Title="Vinderen er!">
     
     <ContentPage.Content>
@@ -11,16 +11,16 @@
                    HorizontalOptions="CenterAndExpand" 
                    VerticalOptions="Start" 
                    FontSize="Large" 
-                   TextColor="#101010" />
+                   TextColor="#eeeeee" />
             <Label Text="Med nummeret" 
                    HorizontalOptions="CenterAndExpand" 
                    VerticalOptions="Start"
-                   TextColor="#101010" />
+                   TextColor="#eeeeee" />
             <Label x:Name="lblNumber" 
                    HorizontalOptions="CenterAndExpand" 
                    VerticalOptions="Start" 
                    FontSize="Large"
-                   TextColor="#101010" />
+                   TextColor="#eeeeee" />
 
             <BoxView  HeightRequest="1"
                       BackgroundColor="AliceBlue" />
@@ -34,17 +34,17 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Name}" 
-                                       TextColor="#101010" 
+                                       TextColor="#eeeeee" 
                                        FontSize="Large" 
                                        VerticalOptions="CenterAndExpand" 
                                        HorizontalOptions="Start" />
                                 <Label Text=" - "
                                        FontSize="Large"
-                                       TextColor="#303030"
+                                       TextColor="#aaaaaa"
                                        VerticalOptions="CenterAndExpand" />
                                 <Label Text="{Binding Number}"
-                                       TextColor="#101010"
-                                       FontSize="Medium"
+                                       TextColor="#eeeeee"
+                                       FontSize="Large"
                                        VerticalOptions="CenterAndExpand"
                                        HorizontalOptions="StartAndExpand" />
                             </StackLayout>
