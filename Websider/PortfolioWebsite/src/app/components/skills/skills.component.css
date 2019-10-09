@@ -1,0 +1,51 @@
+@media(max-width: 1000px){
+  li{
+    font-size: 24px;
+    display: block;
+  }
+
+  .barSkill h1{
+    font-size: 25px;
+  }
+}
+
+@media(min-width: 1001px){
+  li{
+    font-size:24px;
+    display: inline;
+  }
+  h1{
+    font-size: 25px;
+  }
+}
+
+li {
+  max-width: 200px;
+  list-style: none;
+
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+ul {
+  margin: 10px;
+}
+
+.listHeader {
+  background-color: #37e691;
+  color: #343a40;
+  font-weight: 600;
+}
+
+.list-group{
+  list-style-type:circle;
+}
+
+.align-items-center{
+  border-bottom: 1px solid #37e691;
+}
+
+p {
+  font-size: 24px;
+  display: inline;
+}

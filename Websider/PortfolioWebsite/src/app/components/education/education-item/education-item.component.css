@@ -1,0 +1,49 @@
+.education-Wrapper {
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 30px;
+}
+
+.title-wrapper {
+  background-color: #37e691;
+  color: #222;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.eduTitle {
+  margin-left: 15px;
+}
+
+.education-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.education-content.contentClick {
+  max-height:  1000px;
+  transition: max-height 1s ease-in;
+}
+
+.expand-button {
+  margin: auto;
+  margin-right: 20px;
+  transition: all 0.5s ease-out;
+}
+
+.expand-button i {
+  font-size: 25px;
+}
+
+.expand {
+  transform: rotate(180deg);
+}
+/*
+.mat-expansion-panel {
+  background: #37e691;
+} */

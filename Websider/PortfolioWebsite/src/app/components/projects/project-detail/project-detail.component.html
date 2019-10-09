@@ -1,0 +1,29 @@
+<div>
+  <h1 routerLink="/projects" class="pointCurs">
+    <i class="fas fa-arrow-left"></i>  {{project.name}} - {{project.type}}
+  </h1>
+  <div class="container">
+      <div class="imageContainer">
+        <img class="responsive" alt="Responsive image" src="{{project.mainImage}}" width="600" style="border:1px solid #37e691;" />
+      </div>
+      <div class="descriptionContainer">
+        <p style="white-space: pre-line;">
+          {{project.description}}
+        </p>
+
+        <h5>Teknologier</h5>
+        <ul *ngFor="let item of project.technologies">
+          <li>
+            {{item}}
+          </li>
+        </ul>
+      </div>
+    <br />
+      <div>
+        <!-- <form action="{{project.github}}">
+          <input class="btn btn-lg" type="submit" value="Github Link" style="background-color:#37e691;color:#101010;" />
+        </form> -->
+      </div>
+    </div>
+
+</div>

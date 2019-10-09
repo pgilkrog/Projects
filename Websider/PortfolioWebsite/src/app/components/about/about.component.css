@@ -1,0 +1,53 @@
+.aboutWrapper{
+  width: 100%;
+  text-align:justify;
+}
+
+@media (min-width: 781px) {
+  .item1 {
+    display: grid;
+    grid-template-columns: 40% 40%;
+  }
+  .item2 {
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16%;
+    justify-content: center;
+  }
+  .item4 {
+    display: grid;
+    grid-template-columns: 30% 50%;
+    justify-content: right;
+  }
+
+  .img {
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+}
+h5 {
+  color: #37e691;
+  text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+  .aboutText{
+    margin-top: 20px;
+  }
+
+  .aboutImage{
+    text-align: center;
+  }
+}
+
+.favoritText{
+  text-align:left;
+}
+
+.contactBox{
+  border: 1px solid #37e691;
+  text-align: center;
+  padding-top: 2px;
+  height: 30px;
+  max-width: 400px;
+}

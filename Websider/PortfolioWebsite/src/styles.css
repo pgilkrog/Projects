@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #222;
+  font-family: 'Open Sans', sans-serif;
+  color: #eee;
+}
+
+
+i {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* .progress-bar {
+  background-color: #37e691;
+}
+
+.progress {
+  height: 5px;
+  margin-bottom: 20px;
+} */
+
+.pointCurs {
+  cursor: pointer;
+}
+
+p{
+  font-size: 18px;
+}
+
+hr {
+  border-color: #37e691;
+  background-color: #37e691;
+}
+
+
+/* Background Colors */
+.green-bg {
+  background-color: #37e691;
+}
+
+.dark-bg {
+  background-color: #222222;
+}
+
+.white-bg {
+  background-color: #eeeeee;
+}

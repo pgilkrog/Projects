@@ -1,0 +1,75 @@
+<div>
+    <h1>
+      <i class="fas fa-user-tie"></i> Om Mig
+    </h1>
+    <div class="aboutWrapper">
+      <div class="container">
+          <div class="item1">
+              <div class="aboutImage">
+                <img class="img" alt="Responsive image" src="../assets/images/blackWhite.jpg" width="400"
+              style="border:1px solid #37e691;box-shadow:0 0 6px #37e691;" />
+              </div>
+
+              <div class="aboutText">
+                <h5>Faglig Profil</h5>
+                <p>
+                  Med en uddannelse som web-integrator og datamatiker, har jeg fået god erfaring inden for udvikling af software og websider.
+                    <br /><br />
+                  Jeg vil beskrive mig selv som en velorganiseret, ordenlig og grundig person. Jeg har en god koncentra-tionsevne og er god til at påføre mig rutineopgaver.
+                  Jeg har en stærk pligt-følelse af de opgaver jeg foretager mig, og er tilpasningsdygtig og realistisk.
+                </p>
+                <h5>Fritidsinteresser</h5>
+                <p>
+                  Jeg har altid haft en stor interesse i computere generalt, specielt i både videospil og programmering.
+                    <br /><br />
+                  Jeg nyder også at motionerer så jeg kan holde mig frisk og aktiv. Jeg kan godt lide at gøre lidt ekstra ud af aftensmaden,
+                  prøve nye opskrifter og ændre på kendte.
+                </p>
+              </div>
+            </div>
+              <div class="item2">
+              <div class="aboutMusic">
+                  <h5>Favorit Musik</h5>
+                  <ul>
+                    <li *ngFor="let item of favoritMusic">
+                      {{item}}
+                    </li>
+                  </ul>
+              </div>
+
+              <div class="aboutGames">
+                <h5>Favorit Videospil</h5>
+                <ul>
+                  <li *ngFor="let item of favGames">
+                    {{item}}
+                  </li>
+                </ul>
+              </div>              <div class="aboutMovies">
+                <h5>Favorit Film</h5>
+                <ul>
+                  <li *ngFor="let item of favFilms">
+                    {{item}}
+                  </li>
+                </ul>
+              </div>
+
+              <div class="aboutSeries">
+                <h5>Favorit Serier</h5>
+                <ul>
+                  <li *ngFor="let item of favSeries">
+                    {{item}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="item3">
+
+        </div>
+<div class="item4">
+              <div class="contactBox">Email: pgilkrog@gmail.com</div>
+
+              <div class="contactBox">Mobil nummer: 21 53 55 74</div>
+</div>
+      </div>
+    </div>
+  </div>

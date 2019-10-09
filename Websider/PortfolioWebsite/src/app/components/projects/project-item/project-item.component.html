@@ -1,0 +1,16 @@
+<div class="project-wrapper pointCurs" [ngStyle]="imgStyle" *ngIf="!isLoading">
+  <div class="project-detail grid-container">
+    <div class=project-title>
+      {{project.name}}
+    </div>
+    <div class="project-content">
+      <p>{{project.shortDescription}}</p>
+    </div>
+    <div class="project-buttons">
+      <input type="button" class="btn" value="Detail" routerLink="project/{{project.id}}" />
+      <button class="btn" (click)="githubLink(project.github)">Github</button>
+    </div>
+  </div>
+</div>
+
+<mat-spinner color="primary" *ngIf="isLoading"></mat-spinner>

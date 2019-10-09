@@ -1,0 +1,13 @@
+mat-accordion >  .mat-expansion-panel:nth-child(1), .mat-expansion-panel:nth-child(3) , .mat-expansion-panel:nth-child(5)  {
+  background: #37e691;
+  color: #222;
+}
+
+mat-accordion >  .mat-expansion-panel:nth-child(2), .mat-expansion-panel:nth-child(4) , .mat-expansion-panel:nth-child(6)  {
+  background: #eee;
+  color: #222;
+}
+
+mat-expansion-panel {
+  color: #222;
+}

@@ -1,0 +1,28 @@
+.contentDetail{
+  width: 100%;
+}
+
+i{
+  font-style:normal;
+}
+
+.responsive {
+  width: 100%;
+  max-height: 500px;
+}
+
+.imageContainer {
+  padding-top: 10px;
+}
+
+.descriptionContainer {
+  margin-left: 15px;
+}
+
+@media(min-width: 1001px) {
+  .container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: auto;
+  }
+}
