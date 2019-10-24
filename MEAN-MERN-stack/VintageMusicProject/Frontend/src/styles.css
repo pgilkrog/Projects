@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #222;
+  background-image: url('./assets/images/affection-2025111_640.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+  border-color: #4592af;
+  box-shadow: 0 1px 1px #4592af inset, 0 0 8px #4592af;
+  outline: 0 none;
+}
+
+.centerDiv {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-blue {
+  background: #4592af;
+  color: #f6f5f5;
+}
+
+.bg-white {
+  background: #f6f5f5;
+  color: #222;
+}

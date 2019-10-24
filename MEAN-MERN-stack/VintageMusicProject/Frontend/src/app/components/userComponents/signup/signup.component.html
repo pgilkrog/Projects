@@ -1,0 +1,12 @@
+<div class="centerDiv">
+  <div class="card text-white mb-3" style="max-width: 20rem;">
+    <div class="card-body">
+      <form (submit)="signup(signupForm)" #signupForm="ngForm">
+        <input class="form-control" name="uName" ngModel type="input" placeholder="Name" uName /> <br>
+        <input class="form-control" name="email" ngModel type="email" placeholder="E-Mail" email /> <br>
+        <input class="form-control" name="password" ngModel type="password" placeholder="password" password /><br>
+        <button class="btn btn-light" style="float:right;" type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+</div>

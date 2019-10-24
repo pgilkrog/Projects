@@ -1,0 +1,12 @@
+<div class="centerDiv">
+  <div class="card text-white mb-3" style="max-width: 20rem;">
+    <div class="card-body">
+      <form (submit)="login(loginForm)" #loginForm="ngForm">
+        <input class="form-control" name="email" ngModel type="email" placeholder="E-Mail" email /> <br>
+        <input class="form-control" name="password" ngModel type="password" placeholder="password" password />
+        <div class="btnlogin"><button class="btn btn-light" type="submit">Login</button></div>
+        <div class="txtSignup"><p>Not a member? <i routerLink="/Signup">Signup here!</i></p></div>
+      </form>
+    </div>
+  </div>
+</div>

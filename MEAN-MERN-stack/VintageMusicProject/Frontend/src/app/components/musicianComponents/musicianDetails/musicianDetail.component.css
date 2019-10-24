@@ -1,0 +1,17 @@
+.musicianDescription {
+  background-color: #101010;
+  width: 40%;
+}
+
+p{
+  color: #eee;
+}
+
+.img-fluid {
+  max-width: 600px;
+}
+
+i {
+  font-size: 50px;
+  color: #eee;
+}

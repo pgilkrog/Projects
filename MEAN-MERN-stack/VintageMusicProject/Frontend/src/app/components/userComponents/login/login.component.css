@@ -1,0 +1,27 @@
+.btnlogin {
+  float: right;
+  margin-top: 10px;
+}
+
+.txtSignup {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  width: 100%;
+  float: right;
+  text-align: center;
+}
+
+i {
+  cursor: pointer;
+  color: lightblue;
+  text-decoration: underline;
+}
+
+i:hover {
+  color: lightcyan;
+}
+
+.card {
+  background-color: #222;
+  border: 2px solid #4592af;
+}
