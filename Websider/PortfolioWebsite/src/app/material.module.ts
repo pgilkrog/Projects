@@ -7,7 +7,9 @@ import { MatProgressSpinnerModule,
   MatFormFieldModule,
   MatCardModule,
   MatAutocompleteModule,
-  MatInputModule } from '@angular/material';
+  MatInputModule,
+  MatChipsModule,
+  MatIconModule} from '@angular/material';
 
 @NgModule({
   exports: [
@@ -19,7 +21,9 @@ import { MatProgressSpinnerModule,
     MatInputModule,
     MatAutocompleteModule,
     MatGridListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatChipsModule,
+    MatIconModule
   ],
 })
 

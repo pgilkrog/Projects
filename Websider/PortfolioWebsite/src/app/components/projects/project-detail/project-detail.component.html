@@ -12,11 +12,11 @@
         </p>
 
         <h5>Teknologier</h5>
-        <ul *ngFor="let item of project.technologies">
-          <li>
-            {{item}}
-          </li>
-        </ul>
+        <div>
+          <mat-chip-list>
+              <mat-chip  *ngFor="let item of project.technologies">{{item}}</mat-chip>
+          </mat-chip-list>
+        </div>
       </div>
     <br />
       <div>

@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
+import {MatChipInputEvent} from '@angular/material/chips';
 
 
 @Component({
@@ -37,27 +40,34 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 export class ProjectListComponent implements OnInit {
   projectsList: Project[] = [];
   filteredList: Project[] = [];
-  form: FormGroup;
 
-  myControl = new FormControl();
-  options: string[] = ['Angular',
-                        'React',
-                        'C#',
-                        '.Net',
-                        'HTML',
-                        'CSS',
-                        'Bootstrap',
-                        'Java',
-                        'Typescript',
-                        'Xamarin',
-                        'Javascript',
-                        'SQL',
-                        'Unity',
-                        'API',
-                        'NodeJS',
-                        'MongoDB'
-                      ];
-  filteredOptions: Observable<string[]>;
+  visible = true;
+  selectable = true;
+  removable = true;
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  filtersCtrl = new FormControl();
+  filteredFruits: Observable<string[]>;
+  filters: string[] = [];
+  allFilters: string[] = ['Angular',
+                          'React',
+                          'C#',
+                          '.Net',
+                          'HTML',
+                          'CSS',
+                          'Bootstrap',
+                          'Java',
+                          'Typescript',
+                          'Xamarin',
+                          'Javascript',
+                          'SQL',
+                          'Unity',
+                          'API',
+                          'NodeJS',
+                          'MongoDB'
+                       ];
+
+  @ViewChild('fruitInput', {static: false}) fruitInput: ElementRef<HTMLInputElement>;
+  @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
 
   constructor(private service: ProjectService) {}
 
@@ -65,37 +75,107 @@ export class ProjectListComponent implements OnInit {
     this.projectsList = this.service.getProjects();
     this.filteredList = this.service.getProjects();
 
-    this.form = new FormGroup({
-      search: new FormControl(null, {
-        validators: [Validators.required]
-      })
-    });
+    this.filteredFruits = this.filtersCtrl.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => fruit ? this._filter(fruit) : this.allFilters.slice()));
+  }
 
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
+  add(event: MatChipInputEvent): void {
+    // Add fruit only when MatAutocomplete is not open
+    // To make sure this does not conflict with OptionSelected Event
+    if (!this.matAutocomplete.isOpen) {
+      const input = event.input;
+      const value = event.value;
+
+      // Add our fruit
+      if ((value || '').trim()) {
+        this.filters.push(value.trim());
+      }
+
+      // Reset the input value
+      if (input) {
+        input.value = '';
+      }
+
+      this.filtersCtrl.setValue(null);
+    }
+
+    this.filterProjects();
+  }
+
+  remove(fruit: string): void {
+    const index = this.filters.indexOf(fruit);
+
+    if (index >= 0) {
+      this.filters.splice(index, 1);
+    }
+    this.filterProjects();
+  }
+
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.filters.push(event.option.viewValue);
+    this.fruitInput.nativeElement.value = '';
+    this.filtersCtrl.setValue(null);
   }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    return this.allFilters.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
   }
 
   filterProjects() {
-    // this.filteredList.pop();
-    // let temp = false;
-    // for (let i = 0; i < this.projectsList.length; i++) {
-    //   const project = this.projectsList[i];
-    //   for (const item of project.technologies) {
-    //     if (item === this.myControl.value) {
-    //       temp = true;
-    //     }
-    //   }
-    //   if(!temp){
-    //     this.filteredList = this.filteredList.slice(i, 1);
-    //   }
-    // }
-    this.filteredList = this.service.getProjectsBySearch(this.myControl.value);
+    this.filteredList = this.service.getProjectsBySearch(this.filters);
   }
+
+  // projectsList: Project[] = [];
+  // filteredList: Project[] = [];
+  // form: FormGroup;
+
+  // myControl = new FormControl();
+  // filters: string[] = ['Angular',
+  //                       'React',
+  //                       'C#',
+  //                       '.Net',
+  //                       'HTML',
+  //                       'CSS',
+  //                       'Bootstrap',
+  //                       'Java',
+  //                       'Typescript',
+  //                       'Xamarin',
+  //                       'Javascript',
+  //                       'SQL',
+  //                       'Unity',
+  //                       'API',
+  //                       'NodeJS',
+  //                       'MongoDB'
+  //                     ];
+
+  // filteredOptions: Observable<string[]>;
+
+  // constructor(private service: ProjectService) {}
+
+  // ngOnInit() {
+  //   this.projectsList = this.service.getProjects();
+  //   this.filteredList = this.service.getProjects();
+
+  //   this.form = new FormGroup({
+  //     search: new FormControl(null, {
+  //       validators: [Validators.required]
+  //     })
+  //   });
+
+  //   this.filteredOptions = this.myControl.valueChanges.pipe(
+  //     startWith(''),
+  //     map(value => this._filter(value))
+  //   );
+  // }
+
+  // private _filter(value: string): string[] {
+  //   const filterValue = value.toLowerCase();
+  //   return this.filters.filter(option => option.toLowerCase().includes(filterValue));
+  // }
+
+  // filterProjects() {
+  //   this.filteredList = this.service.getProjectsBySearch(this.myControl.value);
+  // }
 }

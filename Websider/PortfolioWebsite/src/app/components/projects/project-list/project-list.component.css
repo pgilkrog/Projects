@@ -30,3 +30,11 @@
 ::ng-deep.mat-form-field-label {
   color: #37e691 !important;
  }
+
+ .example-chip-list {
+  height: auto;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+}
+

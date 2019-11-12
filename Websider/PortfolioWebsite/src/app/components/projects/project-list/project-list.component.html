@@ -4,19 +4,34 @@
   </h1>
   <br /><br />
 
-  <form [formGroup]="form" (submit)="filterProjects()" style="margin-left: 20px;">
-    <mat-form-field class="example-full-width">
-      <input type="text" [formControl]="myControl" aria-label="Tech" matInput placeholder="Søg i projekter." [matAutocomplete]="auto" />
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{ option }}
-        </mat-option>
+  <mat-form-field class="example-chip-list">
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip
+        *ngFor="let filter of filters"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(filter)">
+        {{filter}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input matInput
+        placeholder="New filter..."
+        #fruitInput
+        [formControl]="filtersCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="true"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let filter of filteredFruits | async" [value]="filter">
+        {{filter}}
+      </mat-option>
     </mat-autocomplete>
-    </mat-form-field>{{'   '}}
-    <button mat-raised-button type="submit" color="primary" >Søg</button>
-  </form>
+  </mat-form-field>
 
-<br />
+<br /><br />
 
   <div class="listDisplay" [@listAnimation]="filteredList.length">
     <div class="listContent" *ngFor="let item of filteredList">

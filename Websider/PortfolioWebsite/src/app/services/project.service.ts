@@ -20,21 +20,36 @@ export class ProjectService {
     }
   }
 
-  getProjectsBySearch(search: string) {
+  getProjectsBySearch(search: string[]) {
     this.projects = [];
     const tempPor = projectsData.projects;
 
     for (const project of tempPor) {
-      if (project.description.includes(search)) {
-        this.projects.push(project);
-      } else {
-        for (const item of project.technologies) {
-          if (item === search) {
-            this.projects.push(project);
+      let hej = 0;
+      for (const tech of project.technologies) {
+        for (const s of search) {
+          if (tech === s) {
+            hej++;
           }
         }
       }
+
+      if (hej === search.length) {
+        this.projects.push(project);
+      }
     }
+
+    // for (const project of tempPor) {
+    //   if (project.description.includes(search)) {
+    //     this.projects.push(project);
+    //   } else {
+    //     for (const item of project.technologies) {
+    //       if (item === search) {
+    //         this.projects.push(project);
+    //       }
+    //     }
+    //   }
+    // }
 
     return this.projects;
   }

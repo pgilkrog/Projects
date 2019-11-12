@@ -15,15 +15,6 @@ h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* .progress-bar {
-  background-color: #37e691;
-}
-
-.progress {
-  height: 5px;
-  margin-bottom: 20px;
-} */
-
 .pointCurs {
   cursor: pointer;
 }
@@ -42,7 +33,7 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-p{
+p {
   font-size: 18px;
 }
 
@@ -50,7 +41,6 @@ hr {
   border-color: #37e691;
   background-color: #37e691;
 }
-
 
 /* Background Colors */
 .green-bg {
