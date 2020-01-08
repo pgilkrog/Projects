@@ -15,7 +15,7 @@
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip>
       <input matInput
-        placeholder="New filter..."
+        placeholder="Nyt filter..."
         #fruitInput
         [formControl]="filtersCtrl"
         [matAutocomplete]="auto"
@@ -25,7 +25,7 @@
         (matChipInputTokenEnd)="add($event)">
     </mat-chip-list>
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-      <mat-option *ngFor="let filter of filteredFruits | async" [value]="filter">
+      <mat-option *ngFor="let filter of filteredTechs | async" [value]="filter">
         {{filter}}
       </mat-option>
     </mat-autocomplete>

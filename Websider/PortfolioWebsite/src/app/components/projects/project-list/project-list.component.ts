@@ -46,7 +46,7 @@ export class ProjectListComponent implements OnInit {
   removable = true;
   separatorKeysCodes: number[] = [ENTER, COMMA];
   filtersCtrl = new FormControl();
-  filteredFruits: Observable<string[]>;
+  filteredTechs: Observable<string[]>;
   filters: string[] = [];
   allFilters: string[] = ['Angular',
                           'React',
@@ -59,14 +59,16 @@ export class ProjectListComponent implements OnInit {
                           'Typescript',
                           'Xamarin',
                           'Javascript',
+                          'Material',
                           'SQL',
+                          'MSSQL',
                           'Unity',
                           'API',
                           'NodeJS',
                           'MongoDB'
                        ];
 
-  @ViewChild('fruitInput', {static: false}) fruitInput: ElementRef<HTMLInputElement>;
+  @ViewChild('techInput', {static: false}) techInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
 
   constructor(private service: ProjectService) {}
@@ -75,19 +77,19 @@ export class ProjectListComponent implements OnInit {
     this.projectsList = this.service.getProjects();
     this.filteredList = this.service.getProjects();
 
-    this.filteredFruits = this.filtersCtrl.valueChanges.pipe(
+    this.filteredTechs = this.filtersCtrl.valueChanges.pipe(
         startWith(null),
-        map((fruit: string | null) => fruit ? this._filter(fruit) : this.allFilters.slice()));
+        map((tech: string | null) => tech ? this._filter(tech) : this.allFilters.slice()));
   }
 
   add(event: MatChipInputEvent): void {
-    // Add fruit only when MatAutocomplete is not open
+    // Add tech only when MatAutocomplete is not open
     // To make sure this does not conflict with OptionSelected Event
     if (!this.matAutocomplete.isOpen) {
       const input = event.input;
       const value = event.value;
 
-      // Add our fruit
+      // Add our tech
       if ((value || '').trim()) {
         this.filters.push(value.trim());
       }
@@ -103,24 +105,25 @@ export class ProjectListComponent implements OnInit {
     this.filterProjects();
   }
 
-  remove(fruit: string): void {
-    const index = this.filters.indexOf(fruit);
+  remove(tech: string): void {
+    const index = this.filters.indexOf(tech);
 
     if (index >= 0) {
       this.filters.splice(index, 1);
     }
+
     this.filterProjects();
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
     this.filters.push(event.option.viewValue);
-    this.fruitInput.nativeElement.value = '';
+    this.techInput.nativeElement.value = '';
     this.filtersCtrl.setValue(null);
   }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.allFilters.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+    return this.allFilters.filter(tech => tech.toLowerCase().indexOf(filterValue) === 0);
   }
 
   filterProjects() {
