@@ -4,7 +4,12 @@
       {{project.name}}
     </div>
     <div class="project-content">
-      <p>{{project.shortDescription}}</p>
+      <p>{{project.shortDescription}} </p>
+        <div style="font-weight: bold; font-style: normal; width: 100%; text-align: center;">
+          <i>
+            {{project.technologies[0]}}, {{project.technologies[1]}}, {{project.technologies[2]}}
+          </i>
+        </div>
     </div>
     <div class="project-buttons">
       <input type="button" class="btn" value="Detail" routerLink="project/{{project.id}}" />

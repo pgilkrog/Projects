@@ -28,8 +28,13 @@
 }
 
 .project-content {
+  text-align: justify;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.project-content p {
+    font-size: 16px;
 }
 
 .project-buttons {

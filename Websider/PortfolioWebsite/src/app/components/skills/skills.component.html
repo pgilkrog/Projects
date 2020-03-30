@@ -4,141 +4,57 @@
     </h1>
       <br />
     <div class="container">
-      <div class="row align-items-center">
-        <h1> <i class="fas fa-window-maximize"></i> Web udvikling</h1>
+      <div class="skillsDescription">
+        <hr>
+        <p style="padding-left: 20px; padding-right: 20px;">
+          Med uddannelser som datamatiker og web-integrator, har jeg fået gode kompetencer indenfor web og software -udvikling,
+          til både frontend og backend. Har haft en stor interesse for programmering siden jeg tog min uddannelse som web-integrator,
+          og bruger også fritiden på at udvide mine kompetencer, og lære nye teknologier.
+          Jeg har erfaringer med forskellige sprog og teknologier, specielt i HTML, CSS, C#, .Net, MS-SQL og javascript,
+          da det blev brugt på begge mine uddannelser, også der hvor jeg har været i praktik.
+        </p>
+        <hr>
       </div>
-      <div class="row">
-        <div class="col-md">
-          <ul>
-            <li>
-              <i class="fab fa-html5" style="color:#e44d26"></i> HTML
-            </li>
-            <li>
-              <i class="fab fa-css3-alt" style="color:#1b73ba"></i> CSS
-            </li>
-            <li>
-              <i class="fab fa-angular" style="color:#dd0031"></i> Angular
-            </li>
-            <li>
-              <i class="fab fa-windows"></i> .Net
-            </li>
-            <li>
-              <i class="fab fa-react" style="color:#61dbfb"></i> React
-            </li>
-            <li>
-                <i class="fas fa-layer-group"></i> MEAN / MERN Stack
-            </li>
-            <li>
-                <i class="fab fa-node" style="color:#83cd29"></i> NodeJS
-            </li>
-            <li>
-              <i class="fas fa-shipping-fast" style="color:#f5de19"></i> Express
-            </li>
-            <li>
-                <i class="fas fa-database" style="color:#80c463"></i> MongoDB
-            </li>
-            <li>
-              <i class="fab fa-php" style="color:#777bb3"></i> PHP
-            </li>
-            <li>
-              <i class="fab fa-js-square" style="color:#f5de19"></i> Javascript
-            </li>
-            <li>
-              <i class="fas fa-database" style="color:yellow"></i> MSSQL
-            </li>
-          </ul>
+      <div class="skillsContainer">
+          <div class="skillsBox">
+          <div class="skillsBoxHeader">
+            <h1><i class="fas fa-desktop"></i><br> Frontend</h1>
+            <hr>
+          </div>
+          <div class="skillsBoxBody">
+            <ul>
+              <li *ngFor="let item of skillsFrontend">
+                {{item}}
+              </li>
+            </ul>
+          </div>
         </div>
-      </div><br />
-
-      <div class="row align-items-center">
-        <h1> <i class="far fa-window-maximize"></i> Software</h1>
-      </div>
-      <div class="row">
-        <div class="col-md">
-          <ul>
-            <li>
-              <i class="fas fa-laptop-code" style="color:#6d409d"></i> C#
-            </li>
-            <li>
-              <i class="fab fa-microsoft" style="color:#6d409d"></i> .Net
-            </li>
-            <li>
-              <i class="fab fa-windows"></i> WPF
-            </li>
-            <li>
-              <i class="fab fa-windows"></i> WCF
-            </li>
-            <li>
-              <i class="fab fa-windows"></i> Windows forms
-            </li>
-            <li>
-              <i class="fab fa-java" style="color:#ea2d2e"></i> Java
-            </li>
-            <li>
-              <i class="fas fa-database" style="color:yellow"></i> MSSQL
-            </li>
-            <li>
-              <i class="fas fa-times" style="color:#3498db"></i> Xamarin
-            </li>
-          </ul>
+        <div class="skillsBox">
+          <div class="skillsBoxHeader">
+            <h1><i class="fas fa-server"></i><br> Backend</h1>
+            <hr>
+          </div>
+          <div class="skillsBoxBody">
+            <ul>
+              <li *ngFor="let item of skillsBackend">
+                {{item}}
+              </li>
+            </ul>
+          </div>
         </div>
-      </div><br />
-
-      <div class="row align-items-center">
-        <h1><i class="fas fa-gamepad"></i> Spil</h1>
-      </div>
-      <div class="row">
-        <ul>
-          <li>
-            <i class="fas fa-dice-d6"></i> Unity
-          </li>
-          <li>
-            <i class="fas fa-scroll" style="color:#fbd094"></i> Scripts i C#
-          </li>
-          <li>
-            <i class="fas fa-mobile-alt" style="color:#6ebf4b"></i> Augmented Reality (vuforia)
-          </li>
-        </ul>
-      </div><br />
-
-      <div class="row align-items-center">
-        <h1><i class="fas fa-laptop"></i> Andet</h1>
-      </div>
-      <div class="row">
-        <ul>
-          <li>
-            <i class="fab fa-github"> </i> Github
-          </li>
-          <li>
-            <i class="fab fa-bitbucket" style="color:#2185ff"></i> Bitbucket
-          </li>
-          <li>
-            <i class="fab fa-sourcetree" style="color:#2185ff"></i> Sourcetree
-          </li>
-          <li>
-            <i class="fas fa-dove" style="color:#008080"></i> LaTeX
-          </li>
-          <li>
-            <i class="fas fa-project-diagram" style="color:#ff0000"></i> UML
-          </li>
-        </ul>
-      </div><br />
-
-      <div class="row align-items-center">
-        <h1><i class="fas fa-briefcase"></i> Arbejdsmetoder</h1>
-      </div>
-      <div class="row">
-        <ul>
-          <li>
-            <i class="fas fa-users-cog" style="color:#33a9e1"></i> Scrum
-          </li>
-          <li>
-            <i class="fas fa-users-cog" style="color:#33a9e1"></i> eXtreme Programming (XP)
-          </li>
-          <li>
-            <i class="fas fa-users-cog" style="color:#33a9e1"></i> Unified Process (UP)
-          </li>
-        </ul>
+        <div class="skillsBox">
+          <div class="skillsBoxHeader">
+            <h1><i class="fas fa-toolbox"></i><br> Andet</h1>
+            <hr>
+          </div>
+          <div class="skillsBoxBody">
+            <ul>
+              <li *ngFor="let item of skillsOther">
+                {{item}}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -41,35 +41,41 @@ export class ProjectListComponent implements OnInit {
   projectsList: Project[] = [];
   filteredList: Project[] = [];
 
-  visible = true;
-  selectable = true;
-  removable = true;
-  separatorKeysCodes: number[] = [ENTER, COMMA];
-  filtersCtrl = new FormControl();
-  filteredTechs: Observable<string[]>;
-  filters: string[] = [];
-  allFilters: string[] = ['Angular',
-                          'React',
-                          'C#',
-                          '.Net',
-                          'HTML',
-                          'CSS',
-                          'Bootstrap',
-                          'Java',
-                          'Typescript',
-                          'Xamarin',
-                          'Javascript',
-                          'Material',
-                          'SQL',
-                          'MSSQL',
-                          'Unity',
-                          'API',
-                          'NodeJS',
-                          'MongoDB'
-                       ];
+  semesterProjects: Project[] = [];
+  unityProjects: Project[] = [];
+  webintProjecst: Project[] = [];
+  softwareProjects: Project[] = [];
+  websiteProjects: Project[] = [];
 
-  @ViewChild('techInput', {static: false}) techInput: ElementRef<HTMLInputElement>;
-  @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
+  // visible = true;
+  // selectable = true;
+  // removable = true;
+  // separatorKeysCodes: number[] = [ENTER, COMMA];
+  // filtersCtrl = new FormControl();
+  // filteredTechs: Observable<string[]>;
+  // filters: string[] = [];
+  // allFilters: string[] = ['Angular',
+  //                         'React',
+  //                         'C#',
+  //                         '.Net',
+  //                         'HTML',
+  //                         'CSS',
+  //                         'Bootstrap',
+  //                         'Java',
+  //                         'Typescript',
+  //                         'Xamarin',
+  //                         'Javascript',
+  //                         'Material',
+  //                         'SQL',
+  //                         'MSSQL',
+  //                         'Unity',
+  //                         'API',
+  //                         'NodeJS',
+  //                         'MongoDB'
+  //                      ];
+
+  // @ViewChild('techInput', {static: false}) techInput: ElementRef<HTMLInputElement>;
+  // @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
 
   constructor(private service: ProjectService) {}
 
@@ -77,108 +83,82 @@ export class ProjectListComponent implements OnInit {
     this.projectsList = this.service.getProjects();
     this.filteredList = this.service.getProjects();
 
-    this.filteredTechs = this.filtersCtrl.valueChanges.pipe(
-        startWith(null),
-        map((tech: string | null) => tech ? this._filter(tech) : this.allFilters.slice()));
-  }
-
-  add(event: MatChipInputEvent): void {
-    // Add tech only when MatAutocomplete is not open
-    // To make sure this does not conflict with OptionSelected Event
-    if (!this.matAutocomplete.isOpen) {
-      const input = event.input;
-      const value = event.value;
-
-      // Add our tech
-      if ((value || '').trim()) {
-        this.filters.push(value.trim());
-      }
-
-      // Reset the input value
-      if (input) {
-        input.value = '';
-      }
-
-      this.filtersCtrl.setValue(null);
+    for (const item of this.projectsList) {
+      this.sortingstuff(item);
     }
 
-    this.filterProjects();
+    // this.filteredTechs = this.filtersCtrl.valueChanges.pipe(
+    //     startWith(null),
+    //     map((tech: string | null) => tech ? this._filter(tech) : this.allFilters.slice()));
   }
 
-  remove(tech: string): void {
-    const index = this.filters.indexOf(tech);
-
-    if (index >= 0) {
-      this.filters.splice(index, 1);
+  sortingstuff(item: Project) {
+    switch (item.type) {
+      case 'Semester':
+        this.semesterProjects.push(item);
+        break;
+      case 'Webintegrator':
+        this.webintProjecst.push(item);
+        break;
+      case 'Software':
+        this.softwareProjects.push(item);
+        break;
+      case 'Website':
+        this.websiteProjects.push(item);
+        break;
+      case 'Unity':
+        this.unityProjects.push(item);
+        break;
+      default:
+        return;
     }
-
-    this.filterProjects();
   }
 
-  selected(event: MatAutocompleteSelectedEvent): void {
-    this.filters.push(event.option.viewValue);
-    this.techInput.nativeElement.value = '';
-    this.filtersCtrl.setValue(null);
-  }
+  // add(event: MatChipInputEvent): void {
+  //   // Add tech only when MatAutocomplete is not open
+  //   // To make sure this does not conflict with OptionSelected Event
+  //   if (!this.matAutocomplete.isOpen) {
+  //     const input = event.input;
+  //     const value = event.value;
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.allFilters.filter(tech => tech.toLowerCase().indexOf(filterValue) === 0);
-  }
+  //     // Add our tech
+  //     if ((value || '').trim()) {
+  //       this.filters.push(value.trim());
+  //     }
 
-  filterProjects() {
-    this.filteredList = this.service.getProjectsBySearch(this.filters);
-  }
+  //     // Reset the input value
+  //     if (input) {
+  //       input.value = '';
+  //     }
 
-  // projectsList: Project[] = [];
-  // filteredList: Project[] = [];
-  // form: FormGroup;
+  //     this.filtersCtrl.setValue(null);
+  //   }
 
-  // myControl = new FormControl();
-  // filters: string[] = ['Angular',
-  //                       'React',
-  //                       'C#',
-  //                       '.Net',
-  //                       'HTML',
-  //                       'CSS',
-  //                       'Bootstrap',
-  //                       'Java',
-  //                       'Typescript',
-  //                       'Xamarin',
-  //                       'Javascript',
-  //                       'SQL',
-  //                       'Unity',
-  //                       'API',
-  //                       'NodeJS',
-  //                       'MongoDB'
-  //                     ];
+  //   this.filterProjects();
+  // }
 
-  // filteredOptions: Observable<string[]>;
+  // remove(tech: string): void {
+  //   const index = this.filters.indexOf(tech);
 
-  // constructor(private service: ProjectService) {}
+  //   if (index >= 0) {
+  //     this.filters.splice(index, 1);
+  //   }
 
-  // ngOnInit() {
-  //   this.projectsList = this.service.getProjects();
-  //   this.filteredList = this.service.getProjects();
+  //   this.filterProjects();
+  // }
 
-  //   this.form = new FormGroup({
-  //     search: new FormControl(null, {
-  //       validators: [Validators.required]
-  //     })
-  //   });
-
-  //   this.filteredOptions = this.myControl.valueChanges.pipe(
-  //     startWith(''),
-  //     map(value => this._filter(value))
-  //   );
+  // selected(event: MatAutocompleteSelectedEvent): void {
+  //   this.filters.push(event.option.viewValue);
+  //   this.techInput.nativeElement.value = '';
+  //   this.filtersCtrl.setValue(null);
   // }
 
   // private _filter(value: string): string[] {
   //   const filterValue = value.toLowerCase();
-  //   return this.filters.filter(option => option.toLowerCase().includes(filterValue));
+  //   return this.allFilters.filter(tech => tech.toLowerCase().indexOf(filterValue) === 0);
   // }
 
   // filterProjects() {
-  //   this.filteredList = this.service.getProjectsBySearch(this.myControl.value);
+  //   this.filteredList = this.service.getProjectsBySearch(this.filters);
   // }
 }

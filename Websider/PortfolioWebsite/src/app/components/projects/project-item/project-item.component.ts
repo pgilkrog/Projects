@@ -6,6 +6,7 @@ import { Project } from 'src/app/models/project';
   templateUrl: './project-item.component.html',
   styleUrls: ['./project-item.component.css']
 })
+
 export class ProjectItemComponent implements OnInit {
   @Input() project: Project;
   imgStyle = {};

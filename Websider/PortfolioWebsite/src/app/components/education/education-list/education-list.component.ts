@@ -5,6 +5,7 @@
   templateUrl: './education-list.component.html',
   styleUrls: ['./education-list.component.css']
  })
+
  export class EducationListComponent {
 
  }

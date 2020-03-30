@@ -39,18 +39,6 @@ export class ProjectService {
       }
     }
 
-    // for (const project of tempPor) {
-    //   if (project.description.includes(search)) {
-    //     this.projects.push(project);
-    //   } else {
-    //     for (const item of project.technologies) {
-    //       if (item === search) {
-    //         this.projects.push(project);
-    //       }
-    //     }
-    //   }
-    // }
-
     return this.projects;
   }
 }

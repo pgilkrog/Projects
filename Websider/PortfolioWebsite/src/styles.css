@@ -7,11 +7,7 @@ body {
 }
 
 
-i {
-  font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
+i h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -25,7 +21,6 @@ h1 {
 }
 
 .centerDiv {
-  width: 300px;
   height: auto;
   position: absolute;
   left: 50%;

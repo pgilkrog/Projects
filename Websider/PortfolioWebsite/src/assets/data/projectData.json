@@ -8,7 +8,7 @@
       "mainImage": "../assets/images/imgProjects/s1-img2.PNG",
       "images": [ "1", "2" ],
       "technologies": [ "BlueJ", "Java", "Singleton", "Container Klasse" ],
-      "type": "Datamatiker",
+      "type": "Semester",
       "github": "https://github.com/pgilkrog/Projects/tree/master/SemesterProjekter/Vestbjerg"
     },
     {
@@ -19,7 +19,7 @@
       "mainImage": "../assets/images/imgProjects/s2-img3.PNG",
       "images": [ "1", "2" ],
       "technologies": [ "Java", "SQL", "ado.net", "A* algoritme", "Eclipse" ],
-      "type": "Datamatiker",
+      "type": "Semester",
       "github": "https://github.com/pgilkrog/Projects/tree/master/SemesterProjekter/CharlieJensenTransport"
     },
     {
@@ -30,7 +30,7 @@
       "mainImage": "../assets/images/imgProjects/s3-img3.PNG",
       "images": [ "1", "2" ],
       "technologies": [ ".NET", "C#", "WPF", "WCF", "MVC", "SQL", "HTML", "CSS" ],
-      "type": "Datamatiker",
+      "type": "Semester",
       "github": "https://github.com/pgilkrog/Projects/tree/master/SemesterProjekter/DrinkzyProject"
     },
     {
@@ -41,7 +41,7 @@
       "mainImage": "../assets/images/imgProjects/s4-img1.PNG",
       "images": [ "1", "2" ],
       "technologies": [ "Unity", "C#", "Assets", "Uncanny Valley", "Horror Teori" ],
-      "type": "Datamatiker",
+      "type": "Semester",
       "github": "https://drive.google.com/drive/folders/1YluhsVlsDv3bGSGtSeh0-kK1fndDlMos"
     },
     {
@@ -52,7 +52,7 @@
       "mainImage": "../assets/images/imgProjects/s5-img1.PNG",
       "images": [ "1", "2" ],
       "technologies": [ ".NET", "C#", "Angular", "bitwise", "SQL(ado.net)", "Typescript", "HTML", "CSS", "Bootstrap" ],
-      "type": "Datamatiker",
+      "type": "Semester",
       "github": "https://github.com/pgilkrog/Projects/tree/master/SemesterProjekter/DrinkzyProject"
     },
     {
@@ -81,7 +81,7 @@
       "id": 8,
       "name": "Hurtig Køb",
       "description": "Dette var det projekt jeg lavede som grundforløbs projekt, som måske også afspejler sig fra billedet. Man havde ikke nået at lære så meget endnu, men fik 7 for det.",
-      "shortDescription": "Dette var det projekt jeg lavede som grundforløbs projekt, som web-integrator.",
+      "shortDescription": "Dette var mit projekt på grundforløbet, som web-integrator.",
       "mainImage": "../assets/images/imgProjects/hurtigKoebimg1.PNG",
       "images": [ "1", "2" ],
       "technologies": [ "Asp.net", "C#", "SQL", "HTML", "CSS" ],
@@ -96,7 +96,7 @@
       "mainImage": "../assets/images/imgProjects/2droleplaying.PNG",
       "images": [ "1", "2" ],
       "technologies": [ "C#", "Unity", "Interfaces", "Ronnies Inventory" ],
-      "type": "Game",
+      "type": "Unity",
       "github": "https://github.com/pgilkrog/Projects/tree/master/Mp3Player"
     },
     {
@@ -107,7 +107,7 @@
       "mainImage": "../assets/images/imgProjects/ARGame.PNG",
       "images": [ "1", "2" ],
       "technologies": [ "C#", "Unity", "Augmented Reality", "Vuforia" ],
-      "type": "Game",
+      "type": "Unity",
       "github": "https://github.com/pgilkrog/Projects/tree/master/UnityProjects/ARFirstProject"
     },
     {
@@ -134,17 +134,6 @@
     },
     {
       "id": 13,
-      "name": "Firebase Auth",
-      "description": "Et lille angular projekt, hvor jeg prøvede lidt firebase. Her kan man oprette en bruger og logge ind med den, eller logge ind med google, facebook. \n\nDer er også en side hvor man kan uploade filer, og de vil blive lagt op på en database på firebase.",
-      "shortDescription": "Et lille firebase projekt, hvor man kunne logge ind, og uploade til firebase.",
-      "mainImage": "../assets/images/imgProjects/firebaseAuth.PNG",
-      "images": [ "1", "2" ],
-      "technologies": [ "Angular", "Typescript", "Firebase", "Dropzone" ],
-      "type": "Website",
-      "github": "https://github.com/pgilkrog/Projects/tree/master/Websider/angularfirebase-authentication"
-    },
-    {
-      "id": 14,
       "name": "Portfolio Webside",
       "description": "Dette er min portfolio hjemmeside, som jeg lavede imens jeg søgte arbejde, for at vise hvilke ting jeg kan og projekter jeg har arbejdet på. \n\nDen har ændret sig meget siden jeg startede på den, selve designet har taget en del tid før jeg var tildfreds og det kan nok ikke skjuldes jeg er ret glad for grøn og sort.",
       "shortDescription": "Min portfolio hjemmeside, som jeg har lavet helt selv i angular.",
@@ -152,17 +141,17 @@
       "images": [ "1", "2" ],
       "technologies": [ "Angular", "Typescript", "JSON", "Material", "Responsive Design", "HTML", "CSS" ],
       "type": "Website",
-      "github": "https://github.com/pgilkrog/Projects/tree/master/Websider/angularfirebase-authentication"
+      "github": "https://github.com/pgilkrog/Projects/tree/master/Websider/PortfolioWebsite"
     },
     {
-      "id": 15,
+      "id": 14,
       "name": "Xamarin DrinkApp",
       "description": "Dette var en app jeg lavede i Xamarin, hvori man kan indtaste navner og trykke raffle, hvor den så vil finde en vinder. Man kunne også oprette grupper, og tilføje navne til gruppen og raffle på den måde.",
       "shortDescription": "En lille app lavet i Xamarin, hvor man kan indtaste navne of raffle.",
       "mainImage": "../assets/images/imgProjects/drinkXamarinApp.PNG",
       "images": [ "1", "2" ],
       "technologies": [ ".Net", "Xamarin", "C#", "SQLite" ],
-      "type": "App",
+      "type": "Software",
       "github": "https://github.com/pgilkrog/Projects/tree/master/DrinkApp"
     }
   ]

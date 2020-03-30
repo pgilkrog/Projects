@@ -1,10 +1,16 @@
 .homeWrapper{
-  width: 100%;
+  width: auto;
   align-items: center;
   justify-content: center;
 }
 
 .textDiv {
+  width: 916px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.homeLinks {
   width: 916px;
   margin: 0 auto;
 }

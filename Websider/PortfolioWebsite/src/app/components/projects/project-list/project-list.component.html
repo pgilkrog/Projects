@@ -4,7 +4,7 @@
   </h1>
   <br /><br />
 
-  <mat-form-field class="example-chip-list">
+  <!-- <mat-form-field class="example-chip-list">
     <mat-chip-list #chipList aria-label="Fruit selection">
       <mat-chip
         *ngFor="let filter of filters"
@@ -29,13 +29,36 @@
         {{filter}}
       </mat-option>
     </mat-autocomplete>
-  </mat-form-field>
+  </mat-form-field> -->
 
-<br /><br />
-
-  <div class="listDisplay" [@listAnimation]="filteredList.length">
-    <div class="listContent" *ngFor="let item of filteredList">
+  <h2 style="padding-left: 15px; margin-bottom: -5px;">Semester Projekter</h2>
+    <hr>
+  <div class="listDisplay"  [@listAnimation]="semesterProjects.length">
+    <div class="listContent" *ngFor="let item of semesterProjects">
       <app-project-item [project]="item"></app-project-item>
     </div>
   </div>
+
+  <h2 style="padding-left: 15px; margin-bottom: -5px;">Diverse Projekter</h2>
+    <hr>
+  <div class="listDisplay"  [@listAnimation]="'websiteProjects.length + softwareProjects.length + unityProjects.length'">
+    <div class="listContent" *ngFor="let item of websiteProjects">
+      <app-project-item [project]="item"></app-project-item>
+    </div>
+    <div class="listContent" *ngFor="let item of softwareProjects">
+      <app-project-item [project]="item"></app-project-item>
+    </div>
+    <div class="listContent" *ngFor="let item of unityProjects">
+      <app-project-item [project]="item"></app-project-item>
+    </div>
+  </div>
+
+  <h2 style="padding-left: 15px; margin-bottom: -5px;">Webintegrator Projekter</h2>
+    <hr>
+  <div class="listDisplay"  [@listAnimation]="webintProjecst.length">
+    <div class="listContent" *ngFor="let item of webintProjecst">
+      <app-project-item [project]="item"></app-project-item>
+    </div>
+  </div>
+    <br/>
 </div>

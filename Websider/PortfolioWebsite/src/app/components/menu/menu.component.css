@@ -8,13 +8,11 @@
   right:1%;
   top: 2%;
   cursor: pointer;
-}
-
-.changeBack {
+}.menu-wrapper:hover  {
   background-color: #eee;
 }
 
-.menu-wrapper:hover  {
+.changeBack {
   background-color: #eee;
 }
 
@@ -69,6 +67,10 @@
   margin-top: 10px;
 }
 
+.nav-item i {
+  padding-right: 10px;
+}
+
 h1 {
   color: #eee;
   font-family: 'Great Vibes';
@@ -118,26 +120,6 @@ li.link-active a,
 li.link-active a:hover,
 li.link-active a:focus {
   color: #eee;
+  text-decoration: underline;
   font-weight: 800;
 }
-
-/* @media(max-width: 500px){
-  .menu-wrapper {
-    border-radius: 50%;
-    z-index: 5;
-    display: inline-block;
-    position: fixed;
-    background-color: #37e691;
-    padding: 15px;
-    right:1%;
-    top: 2%;
-    cursor: pointer;
-  }
-
-  .menu-btn {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: all 0.5s ease-out;
-  }
-} */
