@@ -27,11 +27,10 @@ namespace Mp3Player
         OpenFileDialog openFileDialog = new OpenFileDialog();
         SongContainer sc = new SongContainer();
         Song tempSong = new Song();
-        int currentSongIndex = -5;
 
-        bool isPaused = false;
-        bool shuffleOn = false;
-        bool repeatOn = false;
+        int currentSongIndex = 0;
+
+        bool isPaused, shuffleOn, repeatOn = false;
         bool volumeOn = true;
 
         public MainWindow()
@@ -49,43 +48,35 @@ namespace Mp3Player
             imgPlay.Source = new BitmapImage(new Uri("Images/play.png", UriKind.Relative));
         }
 
-        public void PlaySong(string song)
+        public void PlaySong(Song song)
         {
             if (shuffleOn == true)
             {
                 Random rnd = new Random();
                 int month = rnd.Next(SongsList.Items.Count - 1);
-                mp.OpenMusic(SongsList.Items[month].ToString());
+                Song nextSong = SongsList.Items[month] as Song;
+                mp.OpenMusic(nextSong.SongPath);
                 currentSongIndex = month;
             }
             else
             {
-                mp.OpenMusic(song);
+                mp.OpenMusic(song.SongPath);
             }
 
             mp.PlayMusic();
 
-            lblCurrentlyPlatying.Content = tempSong.Name + Environment.NewLine + tempSong.AlbumName + " - " + tempSong.ArtistName;
-        }
-
-        private void BtnOpen_Click(object sender, RoutedEventArgs e)
-        {
-            //openFileDialog.ShowDialog();
-            //string temp = System.IO.Path.GetFullPath(openFileDialog.InitialDirectory);
-            //SongsList.ItemsSource = sc.DirSearch(temp);
-            //lblSong.Content = songs[1];
-            //mp.OpenMusic(songs[1]);
+            lblCurrentlyPlatying.Content = song.Name + Environment.NewLine + song.AlbumName + " - " + song.ArtistName;
         }
 
         private void BtnPlay_Click(object sender, RoutedEventArgs e)
         {
-            if (isPaused == false && currentSongIndex != SongsList.SelectedIndex)
+            if (!isPaused && currentSongIndex != SongsList.SelectedIndex)
             {
                 currentSongIndex = SongsList.SelectedIndex;
                 if (SongsList.SelectedItem != null)
                 {
                     tempSong = SongsList.SelectedItem as Song;
-                    PlaySong(tempSong.SongPath);
+                    PlaySong(tempSong);
                 }
                     
                 DispatcherTimer timer = new DispatcherTimer();
@@ -95,9 +86,15 @@ namespace Mp3Player
 
                 isPaused = true;
                 imgPlay.Source = new BitmapImage(new Uri("Images/pause.png", UriKind.Relative));
-                AlbumImage.Source = new BitmapImage(new Uri(tempSong.AlbumImage, UriKind.Relative));
+
+                BitmapImage myimage = new BitmapImage();
+                myimage.BeginInit();
+                myimage.UriSource = new Uri(tempSong.AlbumImage);
+                myimage.EndInit();
+
+                AlbumImage.Source = myimage;
             }
-            else if (isPaused == false && currentSongIndex == SongsList.SelectedIndex)
+            else if (!isPaused && currentSongIndex == SongsList.SelectedIndex)
             {
                 isPaused = true;
                 imgPlay.Source = new BitmapImage(new Uri("Images/pause.png", UriKind.Relative));
@@ -122,12 +119,12 @@ namespace Mp3Player
             if(MusicProgress.Value >= MusicProgress.Maximum && currentSongIndex+1 < SongsList.Items.OfType<object>().Count())
             {
                 currentSongIndex += 1;
-                PlaySong(SongsList.Items[currentSongIndex].ToString());
+                NextSong();
             }
             else
             {
                 if (repeatOn == true)
-                    currentSongIndex = -1;
+                    currentSongIndex = 0;
             }
         }
 
@@ -164,21 +161,27 @@ namespace Mp3Player
         private void Forward_Click(object sender, RoutedEventArgs e)
         {
             currentSongIndex += 1;
-            PlaySong(SongsList.Items[currentSongIndex].ToString());
+            if (SongsList.Items.Count <= currentSongIndex)
+                currentSongIndex = 0;
+
+            NextSong();
         }
 
         private void Backward_Click(object sender, RoutedEventArgs e)
         {
             currentSongIndex -= 1;
-            PlaySong(SongsList.Items[currentSongIndex].ToString());
+            if (currentSongIndex < 0)
+                currentSongIndex = SongsList.Items.Count - 1;
+
+            NextSong();
         }
 
         private void TreeList_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             if (e.NewValue is Album selectedItem)
-                SongsList.ItemsSource = sc.SortedLisit(selectedItem.AlbumName);
-            else
             {
+                SongsList.ItemsSource = sc.SortedLisit(selectedItem.AlbumName);
+            } else {
                 Artist selectedItem2 = e.NewValue as Artist;
                 SongsList.ItemsSource = sc.SortedLisit(selectedItem2.ArtistName);
             }
@@ -269,6 +272,12 @@ namespace Mp3Player
             {
                 this.WindowState = WindowState.Maximized;
             }
+        }
+
+        private void NextSong()
+        {
+            Song nextSong = SongsList.Items[currentSongIndex] as Song;
+            PlaySong(nextSong);
         }
     }
 }

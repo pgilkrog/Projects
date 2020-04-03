@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
+
 export class SkillsComponent implements OnInit  {
   skillsFrontend: string[] = [];
   skillsBackend: string[] = [];

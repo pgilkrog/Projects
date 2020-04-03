@@ -17,21 +17,20 @@ namespace Mp3Player
         readonly string location = "C:/Users/" + Environment.UserName + "/Music/";
         List<Artist> artists = new List<Artist>();
         List<Song> Songs = new List<Song>();
-
-        int i = 0;
+        List<Song> filteredSongs = new List<Song>();
 
         public List<FileInfo> GetList()
         {
-            if(i == 0)
-                artists.Add(new Artist { ArtistName = "All" });
-
-            i++;
+            artists.Add(new Artist { ArtistName = "All" });
+           
             return DirSearch(location);
         }
 
         public List<Song> GetAllSongs()
         {
-            GetList();
+            if(Songs.Count <= 0)
+                GetList();
+
             return Songs;
         }
 
@@ -50,8 +49,12 @@ namespace Mp3Player
             try
             {
                 foreach (string file in Directory.GetFiles(sDir, "*.*")
-                    .Where(s => s.EndsWith(".wma") || s.EndsWith(".mp3") || s.EndsWith(".wav") || 
-                    s.EndsWith(".AIFF") || s.EndsWith(".AAC") || s.EndsWith(".OGG")))
+                    .Where(s => s.EndsWith(".wma") 
+                    || s.EndsWith(".mp3") 
+                    || s.EndsWith(".wav") 
+                    || s.EndsWith(".AIFF") 
+                    || s.EndsWith(".AAC") 
+                    || s.EndsWith(".OGG")))
                 {
                     FileInfo fileInfo = new FileInfo(file);
                     files.Add(fileInfo);
@@ -59,33 +62,27 @@ namespace Mp3Player
                     
                     var tfile = TagLib.File.Create(file);
 
-                    foreach (string tempFile in Directory.GetFiles(sDir, "Folder.JPG"))
+                    foreach (string tempfile in Directory.GetFiles(sDir, "folder.jpg"))
                     {
-                        FileInfo imageInfo = new FileInfo(tempFile);
+                        FileInfo imageinfo = new FileInfo(tempfile);
 
-                        if (imageInfo.Exists)
-                        {
-
-                        }
-
-                        if (imageInfo != null || imageInfo.FullName != "")
-                            tempImage = imageInfo.FullName;
-
-                        tempImage = tempImage.Replace(@"\","/");
+                        if (imageinfo.Exists)
+                           tempImage = imageinfo.FullName.Replace(@"\", "/");
                     }
 
-                    var pic = tfile.Tag.Pictures.FirstOrDefault();
-                    //string title = tfile.Tag.Title;
-                    //string album = tfile.Tag.Album;
-                    //uint albumTracks = tfile.Tag.TrackCount;
-                    //string[] genre = tfile.Tag.Genres;
-                    //string pathName = tfile.Name;
-                    //uint trackNumber = tfile.Tag.Track;
-                    //TimeSpan duration = tfile.Properties.Duration;
-                    //uint year = tfile.Tag.Year;
-                    //string[] Performers = tfile.Tag.Performers;
-                    //string lyrics = tfile.Tag.Lyrics;
-                    //string[] composers = tfile.Tag.Composers;
+                    // POSSIBLE SONG VARIABLES //
+                    //var pic = tfile.tag.pictures.firstordefault();
+                    //string title = tfile.tag.title;
+                    //string album = tfile.tag.album;
+                    //uint albumtracks = tfile.tag.trackcount;
+                    //string[] genre = tfile.tag.genres;
+                    //string pathname = tfile.name;
+                    //uint tracknumber = tfile.tag.track;
+                    //timespan duration = tfile.properties.duration;
+                    //uint year = tfile.tag.year;
+                    //string[] performers = tfile.tag.performers;
+                    //string lyrics = tfile.tag.lyrics;
+                    //string[] composers = tfile.tag.composers;
 
                     Songs.Add(new Song
                     {
@@ -97,7 +94,8 @@ namespace Mp3Player
                         Performers = tfile.Tag.Performers,
                         Genre = tfile.Tag.FirstGenre,
                         Duration = tfile.Properties.Duration,
-                        AlbumImage = tempImage
+                        AlbumImage = tempImage,
+                        Year = Convert.ToInt32(tfile.Tag.Year)
                     });
 
                     if (tempArt.ArtistName != fileInfo.Directory.Parent.Name)
@@ -107,10 +105,10 @@ namespace Mp3Player
                             if(check.ArtistName == fileInfo.Directory.Parent.Name)
                                 exists = true;
                         }
+
                         if (!exists || artists.Count == 0)
                         {
                             tempArt.ArtistName = fileInfo.Directory.Parent.Name.ToString();
-                            //tempArt.ArtistName = tfile.Tag.FirstAlbumArtist.ToString();
                             artists.Add(tempArt);
                             string tempLocation = location + tempArt.ArtistName + "/";
                             foreach (string s in Directory.GetDirectories(tempLocation))
@@ -126,14 +124,11 @@ namespace Mp3Player
                 {
                     files.AddRange(DirSearch(d));
                 }
-                
             }
-            catch (System.Exception excpt)
+            catch (Exception excpt)
             {
                 MessageBox.Show(excpt.Message);
             }
-
-            Songs = Songs.Distinct().ToList();
 
             return files;
         }
@@ -145,21 +140,18 @@ namespace Mp3Player
 
         public List<Song> SortedLisit(string sort)
         {
+            filteredSongs.Clear();
+
             if (sort.Equals("All"))
                 return GetAllSongs();
-
-            List<Song> newList = new List<Song>();
-
+            
             foreach(Song f in GetAllSongs())
             {
                 if (f.AlbumName.Equals(sort) || f.ArtistName.Equals(sort))
-                {
-                    newList.Add(f);
-                }
+                    filteredSongs.Add(f);
             }
 
-            newList = newList.Distinct().ToList();
-            return newList;
+            return filteredSongs.Distinct().ToList();
         }
     }
 }

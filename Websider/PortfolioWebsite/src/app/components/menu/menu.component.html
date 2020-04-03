@@ -7,12 +7,14 @@
 </div>
 
 <nav class="menu-nav green-bg" [ngClass]="{show: showMenu}">
+  <h1>Paw Gilkrog</h1>
   <ul>
-      <li style="margin-left:-30px;">
-          <h1>Paw Gilkrog</h1>
-        </li>
     <li [routerLinkActive]='["link-active"]' class="nav-item">
         <a routerLink="home" (click)="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           <i class="fas fa-home"></i>Home
         </a>
     </li>

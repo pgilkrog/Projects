@@ -19,5 +19,6 @@ namespace Mp3Player.Models
         public string Lyrics { get; set; }
         public string AlbumName { get; set; }
         public string AlbumImage { get; set; }
+        public int Year { get; set; }
     }
 }

@@ -25,9 +25,8 @@
 
         <Grid Width="300" Margin="10,10,890,10">
             <Border BorderBrush="#eee" BorderThickness="0 0 1 0" Margin="0,-15,0,-14"/>
-            <Grid Height="100" Width="100" Margin="72,10,128,570">
-                <Border BorderBrush="#eee" BorderThickness="1"/>
-                <Image Name="AlbumImage" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Images/music.png" OpacityMask="Black" />
+            <Grid Height="120" Width="120" Margin="22,10,158,550">
+                <Image Name="AlbumImage" HorizontalAlignment="Left" Height="120" Width="120" VerticalAlignment="Top" Source="Images/music.png" OpacityMask="Black" />
             </Grid>
             <Label Name="lblCurrentlyPlatying" Content="Song &#10;Artist " HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Width="280" Foreground="#FFD4D4D4" Height="48"/>
 
@@ -79,10 +78,10 @@
         <Button Name="Forward" HorizontalAlignment="Left" Margin="189,192,0,0" VerticalAlignment="Top" Width="45" Click="Forward_Click" ToolTip="Next" Background="Transparent" BorderBrush="Transparent">
             <Image Source="Images/next.png" />
         </Button>
-        <Button Name="btnRepeat" HorizontalAlignment="Left" Margin="246,78,0,0" Height="50" VerticalAlignment="Top" ToolTip="Repeat" Background="Transparent" BorderBrush="Transparent" Click="BtnRepeat_Click">
+        <Button Name="btnRepeat" HorizontalAlignment="Left" Margin="208,81,0,0" Height="50" VerticalAlignment="Top" ToolTip="Repeat" Background="Transparent" BorderBrush="Transparent" Click="BtnRepeat_Click">
             <Image Name="imgRepeat" Source="Images/repeat.png"/>
         </Button>
-        <Button Name="btnShuffle" HorizontalAlignment="Left" Margin="246,10,0,0" Height="50" VerticalAlignment="Top" ToolTip="Shuffle" Background="Transparent" BorderBrush="Transparent" Click="BtnShuffle_Click">
+        <Button Name="btnShuffle" HorizontalAlignment="Left" Margin="208,26,0,0" Height="50" VerticalAlignment="Top" ToolTip="Shuffle" Background="Transparent" BorderBrush="Transparent" Click="BtnShuffle_Click">
             <Image Name="imgShuffle" Source="Images/shuffle.png"/>
         </Button>
         <Button Name="btnVolume" HorizontalAlignment="Left" Margin="10,286,0,0" Height="40" VerticalAlignment="Top" ToolTip="Volume on/off" Background="Transparent" BorderBrush="Transparent" Click="BtnVolume_Click" >
