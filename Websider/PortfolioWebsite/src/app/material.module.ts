@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { MatProgressSpinnerModule,
+import {
+  MatProgressSpinnerModule,
   MatTooltipModule,
   MatGridListModule,
   MatExpansionModule,
@@ -9,7 +10,8 @@ import { MatProgressSpinnerModule,
   MatAutocompleteModule,
   MatInputModule,
   MatChipsModule,
-  MatIconModule} from '@angular/material';
+  MatIconModule
+} from '@angular/material';
 
 @NgModule({
   exports: [

@@ -16,11 +16,26 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectListComponent } from './components/projects/project-list/project-list.component';
 import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
 import { ProjectDetailComponent } from './components/projects/project-detail/project-detail.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { DatePipe } from '@angular/common';
+
+const config = {
+  apiKey: 'AIzaSyDdJ13wVetNUSW09uvIWoY94KaHrQfm30w',
+  authDomain: 'pawportfolio-b84d3.firebaseapp.com',
+  databaseURL: 'https://pawportfolio-b84d3.firebaseio.com',
+  projectId: 'pawportfolio-b84d3',
+  storageBucket: 'pawportfolio-b84d3.appspot.com',
+  messagingSenderId: '641609071420'
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    NavbarComponent,
     HomepageComponent,
     EducationListComponent,
     EducationItemComponent,
@@ -35,12 +50,14 @@ import { ProjectDetailComponent } from './components/projects/project-detail/pro
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule
   ],
   exports: [
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

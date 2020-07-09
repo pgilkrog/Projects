@@ -10,12 +10,12 @@ import { ProjectDetailComponent } from './components/projects/project-detail/pro
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomepageComponent },
-  { path: 'education', component: EducationListComponent},
-  { path: 'skills', component: SkillsComponent },
-  { path: 'projects', component: ProjectListComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'projects/project/:id', component: ProjectDetailComponent}
+  { path: 'home', component: HomepageComponent,  data: { animation: 'home' }  },
+  { path: 'education', component: EducationListComponent,  data: { animation: 'OtherPage' } },
+  { path: 'skills', component: SkillsComponent,  data: { animation: 'skills' }  },
+  { path: 'projects', component: ProjectListComponent,  data: { animation: 'projects' }  },
+  { path: 'about', component: AboutComponent,  data: { animation: 'about' }  },
+  { path: 'projects/project/:id', component: ProjectDetailComponent,  data: { animation: 'project' } }
 ];
 
 @NgModule({

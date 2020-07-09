@@ -1,93 +1,111 @@
-.img {
-  width: 400px;
-  border: 1px solid #37e691;
-  box-shadow:0 0 6px #37e691;
+h1 {
+  margin: 0 auto;
+}
+
+form {
+  width: 320px;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  padding: .6rem;
+  margin: 0 0 20px 0;
+}
+
+textarea {
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+  padding: .6rem;
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  width: 105%;
+  background-color: #37e691;
+  border: none;
+  padding: .4rem;
+  margin: 10px 0 10px 0;
+  font-weight: 800;
+}
+
+button:hover {
+  background-color: #96e4be;
+}
+
+button:disabled {
+  background-color: #888;
 }
 
 .aboutWrapper {
   width: 100%;
-  text-align:justify;
   margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.aboutInfo {
-  padding-left: 30px;
-  margin: auto 0;
-}
-
-.aboutTextWrapper {
-  width: 100%;
-}
-
-@media (min-width: 781px) {
-  .aboutText {
-    margin: 0 auto;
-    width: 60%;
-    margin-top: 35px;
-    padding: 10px 20px ;
-    color: #eee;
-  }
-
-  .item1 {
-    display: grid;
-    grid-template-columns: 50% 30%;
-  }
-
-  .item2 {
-    display: grid;
-    grid-template-columns: 16% 16% 16% 16%;
-    justify-content: center;
-  }
-
-  .item4 {
-    display: grid;
-    grid-template-columns: 30% 50%;
-    justify-content: right;
-  }
-
-  .img {
-    float: right;
-    margin-right: 30px;
-  }
-}
-
-@media (max-width: 780px) {
-  .aboutInfo{
-    margin-top: 20px;
-    padding-left: 0;
-  }
-
-  .aboutImage{
-    text-align: center;
-  }
-}
-
-.favoritText{
-  text-align:left;
-}
-
-.contactBox{
-  border: 1px solid #37e691;
-  text-align: center;
-  padding-top: 5px;
-  height: 30px;
+.aboutImage, .aboutCountry {
   max-width: 400px;
-  margin-top: 5px;
 }
 
-@media (max-width: 420px) {
-  .img{
-    width: 300px;
+.item1 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 50px;
+}
+
+.item2 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-top: 3px solid #37e691;
+  border-bottom: 3px solid #37e691;
+  background-image: url('../../../assets/images/Rectangle 752.png');
+}
+
+@media(min-width: 630px) {
+  .aboutImage {
+    margin-left: auto;
   }
-}
 
-@media (max-width: 330px) {
-  .img{
-    width: 250px;
+  .aboutInfo {
+    margin-right: auto;
+    margin-top: 6vh;
   }
-}
 
+  .item1, .item2 {
+    display: inline-flex;
+  }
 
-mat-chip {
-  background-color: #37e691;
+  .aboutImage {
+    max-width: 300px;
+    margin-right: 40px;
+  }
+
+  .aboutCountry {
+    max-width: 300px;
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+
+  .aboutForm {
+    margin-left: auto;
+  }
+
+  .aboutCountry {
+    margin-right: auto;
+  }
+
+  form {
+    width: 400px;
+  }
 }

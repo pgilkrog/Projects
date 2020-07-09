@@ -1,55 +1,56 @@
-.container i {
-  font-size: 64px;
+h1 {
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .container {
   width: 100%;
-}
-
-.skillsDescription {
-  height: auto;
-  width: 100%;
-  text-align: justify;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skillsContainer {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 270px 270px 270px;
   grid-auto-rows: auto;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
+  width: 860px;
   gap: 20px;
+  color: #343a40;
+  margin: 0 auto;
+}
+
+.hejsa {
+    width: 100%;
+    background-image: url('../../../assets/images/Rectangle 752.png');
+    border-top: 3px solid #37e691;
+    border-bottom: 3px solid #37e691;
+    padding: 30px 0 30px 0;
 }
 
 .skillsBox {
-  background-color: #37e691;
-  border-radius: 5px;
-  padding: 15px;
-  display: inline-block;
-  max-height: 150px;
-  color: #343a40;
-  transition: max-height .5s ease-out;
-}
-
-.skillsBox:hover {
-  max-height: 500px;
-  transition: max-height .5s ease-out;
-  background-color: #7BEFB6;
-}
-
-.skillsBoxBody {
-  opacity: 0;
-  transition: 1s ease;
+  transition: .5s ease-out;
 }
 
 .skillsBoxHeader {
   text-align: center;
+  background-color: #37e691;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
 }
 
-.skillsBox:hover .skillsBoxBody {
-  opacity: 1;
+.skillsBoxBody {
+  padding: 5px;
+  background-color: #eee;
+  margin-top: -18px;
+  border-radius: 0 0 10px 10px;
+  height: 340px;
+}
+
+.skillsBoxBody p {
+  font-size: 14px;
+  padding: .5rem 1rem;
+  text-align: justify;
 }
 
 li {
@@ -61,6 +62,7 @@ li {
   .skillsContainer {
     grid-template-columns: 270px 270px;
     grid-auto-rows: 2;
+    width: 540px;
   }
 }
 
@@ -68,5 +70,24 @@ li {
   .skillsContainer {
     grid-template-columns: 270px;
     grid-auto-rows: 3;
+    width: 270px;
   }
 }
+
+@media(min-width: 930px) {
+  .skillsContainer:hover .skillsBox {
+    transform: scale(.8);
+    opacity: .4;
+    filter: blur(1px);
+    transition: .5s ease-out;
+  }
+
+  .skillsContainer .skillsBox:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: blur(0);
+    transition: .5s ease-out;
+  }
+}
+
+

@@ -1,60 +1,56 @@
-<div>
-    <h1>
-      <i class="fas fa-code"></i> Kompetencer
-    </h1>
-      <br />
-    <div class="container">
-      <div class="skillsDescription">
-        <hr>
-        <p style="padding-left: 20px; padding-right: 20px;">
-          Med uddannelser som datamatiker og web-integrator, har jeg fået gode kompetencer indenfor web og software -udvikling,
-          til både frontend og backend. Har haft en stor interesse for programmering siden jeg tog min uddannelse som web-integrator,
-          og bruger også fritiden på at udvide mine kompetencer, og lære nye teknologier.
-          Jeg har erfaringer med forskellige sprog og teknologier, specielt i HTML, CSS, C#, .Net, MS-SQL og javascript,
-          da det blev brugt på begge mine uddannelser, også der hvor jeg har været i praktik.
-        </p>
-        <hr>
+
+<div class="container">
+  <h1>
+    <i class="fas fa-code"></i> Kompetencer
+  </h1>
+  <div class="hejsa">
+    <div class="skillsContainer">
+        <div class="skillsBox">
+          <div class="skillsBoxHeader">
+            <h1><i class="fas fa-desktop"></i> Frontend</h1>
+          </div>
+          <div class="skillsBoxBody">
+            <p>
+              Jeg kan godt lide at arbejde med frontend teknologier, og er blevet ret vild med både Angular og React.
+            </p>
+            <ul>
+              <li *ngFor="let item of skillsFrontend">
+                {{item}}
+              </li>
+            </ul>
+          </div>
       </div>
-      <div class="skillsContainer">
-          <div class="skillsBox">
-            <div class="skillsBoxHeader">
-              <h1><i class="fas fa-desktop"></i><br> Frontend</h1>
-                <hr>
-            </div>
-            <div class="skillsBoxBody">
-              <ul>
-                <li *ngFor="let item of skillsFrontend">
-                  {{item}}
-                </li>
-              </ul>
-            </div>
+      <div class="skillsBox">
+        <div class="skillsBoxHeader">
+          <h1><i class="fas fa-server"></i> Backend</h1>
         </div>
-        <div class="skillsBox">
-          <div class="skillsBoxHeader">
-            <h1><i class="fas fa-server"></i><br> Backend</h1>
-            <hr>
-          </div>
-          <div class="skillsBoxBody">
-            <ul>
-              <li *ngFor="let item of skillsBackend">
-                {{item}}
-              </li>
-            </ul>
-          </div>
+        <div class="skillsBoxBody">
+          <p>
+            Jeg kan også godt lide at arbejde med backend teknologier. Er mest bekendt med .net, C# og MSSQL.
+          </p>
+          <ul>
+            <li *ngFor="let item of skillsBackend">
+              {{item}}
+            </li>
+          </ul>
         </div>
-        <div class="skillsBox">
-          <div class="skillsBoxHeader">
-            <h1><i class="fas fa-toolbox"></i><br> Andet</h1>
-            <hr>
-          </div>
-          <div class="skillsBoxBody">
-            <ul>
-              <li *ngFor="let item of skillsOther">
-                {{item}}
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div class="skillsBox">
+        <div class="skillsBoxHeader">
+          <h1><i class="fas fa-toolbox"></i> Andet</h1>
+        </div>
+        <div class="skillsBoxBody">
+          <p>
+            Diverse værktøjer og ting som jeg har erfaring med.
+          </p>
+          <ul>
+            <li *ngFor="let item of skillsOther">
+              {{item}}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
+

@@ -1,6 +1,7 @@
 import { Project } from '../models/project';
 import projectsData from '../../assets/data/projectData.json';
 import { Injectable } from '@angular/core';
+import { Email } from '../models/email';
 
 @Injectable({
   providedIn: 'root'

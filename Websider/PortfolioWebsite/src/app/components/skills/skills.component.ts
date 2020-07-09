@@ -16,6 +16,7 @@ export class SkillsComponent implements OnInit  {
       'Angular',
       'React',
       'Javascript',
+      'Typescript',
       'HTML',
       'CSS',
       'WPF / Windforms',
@@ -39,7 +40,10 @@ export class SkillsComponent implements OnInit  {
       'Vuforia(AR)',
       'GIT',
       'Gimp/photoshop',
-      'UML'
+      'Adobe XD',
+      'UML',
+      'Agile arbejdsmetoder',
+      'Scrum og XP'
     ];
   }
 }

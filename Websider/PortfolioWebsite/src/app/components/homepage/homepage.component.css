@@ -1,72 +1,167 @@
-.homeWrapper{
-  width: auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.textDiv {
-  width: 916px;
-  margin: 0 auto;
-  padding-top: 70px;
-}
-
-.homeLinks {
-  width: 916px;
-  margin: 0 auto;
-}
-
-.homeButtons {
-  width: 916px;
-  text-align: right;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-.homeButtons i {
-  font-size: 50px;
-  padding-right: 10px;
-}
-
-.homeButtons i:hover{
-  color: #eee;
-}
-
-.coffee {
-  width: 916px;
-  height: 390px;
-  margin: 0 auto;
-  animation: play 1.2s steps(13) infinite;
-  background: url('../../../assets/images/desksmoke.png') left center;
-  background-size: cover;
-}
-@keyframes play {
-    100% { background-position: -11908px; }
-}
-
-@media (max-width: 930px) {
-  .textDiv{
-    margin-top: 50px;
-    width: 90%;
-  }
-  .imgWrapper{
-    display: none;
-  }
-  .homeButtons{
-    width: 90%;
-  }
-}
-
-hr {
-  margin-top: -5px;
-  height: 5px;
-}
-
 i {
-  font-style: normal;
-  color: #37e691;
+  color: #eee;
+  text-shadow: 1px 1px #222;
 }
 
 h4 {
-  font-weight: normal;
-  font-size: 24px;
+  display: inline;
+}
+
+p {
+  color: #eee;
+}
+
+.homeWrapper{
+  display: flexbox;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.topBanner {
+  margin-top: 50px;
+  width: 100%;
+  background: #37e691;
+  display: flex;
+  overflow: hidden;
+}
+
+.topImage {
+  display: none;
+}
+
+.topText {
+  padding: 3rem 1rem 6rem 1rem;
+  color: #222;
+  font-weight: 800;
+  width: 100%;
+}
+
+.imageScreens {
+  display: none;
+}
+
+.imageScreens hr {
+  margin-top: -6px;
+  height: 5px;
+  z-index: -1;
+}
+
+.links {
+  width: 100%;
+  text-align: center;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.homeButtons {
+  background-color: #37e691;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.topText h4 {
+  color: #222;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.topText h1 {
+  font-size: 2.2rem;
+}
+
+.homeButtons i {
+  color: #222;
+  font-size: 3rem;
+  padding: 1rem;
+  text-shadow: none;
+}
+
+a:hover i {
+  color: #eee;
+  cursor: pointer;
+}
+
+.links {
+  display: inline-block;
+  font-style: normal;
+  font-size: 2rem;
+  color: #37e691;
+  text-align: center;
+}
+
+.links {
+  font-family: 'Roboto', sans-serif;
+}
+
+.links h4:hover{
+  cursor: pointer;
+  color: #eee;
+}
+
+.links h4:hover i {
+  color: #eee;
+  cursor: pointer;
+}
+
+.links i {
+  color: #37e691;
+}
+
+.homeButtons a {
+  text-decoration: none;
+  color: #222;
+  font-size: 3rem;
+  padding: 0 2rem;
+}
+
+.homeButtons a:hover {
+  color: #eee;
+}
+
+@media(min-width: 930px) {
+  .topImage {
+    display: initial;
+    padding-top: 50px;
+    margin-bottom: -15px;
+    margin-right: auto;
+    width: 30%;
+  }
+
+  .topText {
+    /* width: 600px;
+    margin-left: auto;
+    padding-top: 160px; */
+    text-align: center;
+  }
+
+  .backgroundSquare {
+    background-image: url('../../../assets/images/Rectangle 752.png');
+  }
+
+  .imageScreens {
+    display: initial;
+    width: 100%;
+    height: auto;
+    margin-top: 10em;
+  }
+
+  .links {
+    padding-top: 70px;
+  }
+
+  .coffee {
+    width: 916px;
+    height: 390px;
+    margin: 0 auto;
+    animation: play 1.2s steps(13) infinite;
+    background: url('../../../assets/images/desksmoke.png') left center;
+    background-size: cover;
+    z-index: 1;
+  } @keyframes play {
+      100% { background-position: -11908px; }
+  }
 }

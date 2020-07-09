@@ -1,5 +1,6 @@
-<app-menu></app-menu>
+<app-navbar *ngIf="screenWidth>930"></app-navbar>
+<app-menu *ngIf="screenWidth<=930"></app-menu>
 
-<div class="contentWrapper">
-  <router-outlet></router-outlet>
+<div class="contentWrapper" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>

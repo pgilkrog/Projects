@@ -2,13 +2,15 @@
 
 body {
   background: #222;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #eee;
+  margin: 0;
+  padding: 0;
 }
 
 
-i h1 {
-  font-family: 'Open Sans', sans-serif;
+i {
+  font-family: 'Roboto';
 }
 
 .pointCurs {
@@ -18,14 +20,6 @@ i h1 {
 .responsive {
   width: 100%;
   height: auto;
-}
-
-.centerDiv {
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 p {

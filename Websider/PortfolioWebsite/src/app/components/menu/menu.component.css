@@ -84,6 +84,7 @@ ul li a:hover{
   display: inline-block;
   position: fixed;
   background-color: #37E691;
+  border: 1px solid #222;
   padding: 30px;
   right:1%;
   top: 2%;
