@@ -1,53 +1,19 @@
-h1 {
-  margin: 0 auto;
+h2 i {
+  color: #37e691;
+  font-size: 4rem;
 }
 
-form {
-  width: 320px;
-  margin-top: 10px;
-}
-
-input {
-  width: 100%;
-  border-radius: 2px;
-  border: none;
-  padding: .6rem;
-  margin: 0 0 20px 0;
-}
-
-textarea {
-  border-radius: 2px;
-  border: none;
-  width: 100%;
-  padding: .6rem;
-  resize: none;
+p {
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 img {
   max-width: 100%;
 }
 
-button {
-  width: 105%;
-  background-color: #37e691;
-  border: none;
-  padding: .4rem;
-  margin: 10px 0 10px 0;
-  font-weight: 800;
-}
-
-button:hover {
-  background-color: #96e4be;
-}
-
-button:disabled {
-  background-color: #888;
-}
-
 .aboutWrapper {
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -58,9 +24,8 @@ button:disabled {
 
 .item1 {
   width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-  padding-top: 50px;
+  padding: 30px;
+  margin-top: 20px;
 }
 
 .item2 {
@@ -69,12 +34,20 @@ button:disabled {
   padding: 10px;
   border-top: 3px solid #37e691;
   border-bottom: 3px solid #37e691;
+  justify-content: space-evenly;
+  text-align: center;
   background-image: url('../../../assets/images/Rectangle 752.png');
+}
+
+.item3 {
+  width: 100%;
+  padding: 30px;
 }
 
 @media(min-width: 630px) {
   .aboutImage {
-    margin-left: auto;
+    margin: 0 auto;
+    max-width: 300px;
   }
 
   .aboutInfo {
@@ -83,18 +56,12 @@ button:disabled {
   }
 
   .item1, .item2 {
-    display: inline-flex;
-  }
-
-  .aboutImage {
-    max-width: 300px;
-    margin-right: 40px;
+    display: flex;
   }
 
   .aboutCountry {
     max-width: 300px;
-    margin-left: 40px;
-    margin-top: 50px;
+    margin: 0 auto;
   }
 
   .aboutForm {
@@ -108,4 +75,34 @@ button:disabled {
   form {
     width: 400px;
   }
+}
+
+.shakeAnim {
+  animation: shake 6s 3s ease-in-out infinite;
+  transform-origin: 50% 30px;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  3% { transform: rotate(30deg); }
+  6% { transform: rotate(-28deg); }
+  9% { transform: rotate(34deg); }
+  12% { transform: rotate(-32deg); }
+  15% { transform: rotate(30deg); }
+  18% { transform: rotate(-28deg); }
+  21% { transform: rotate(26deg); }
+  24% { transform: rotate(-24deg); }
+  27% { transform: rotate(22deg); }
+  30% { transform: rotate(-20deg); }
+  33% { transform: rotate(18deg); }
+  36% { transform: rotate(-16deg); }
+  39% { transform: rotate(14deg); }
+  42% { transform: rotate(-12deg); }
+  45% { transform: rotate(10deg); }
+  48% { transform: rotate(-8deg); }
+  51% { transform: rotate(6deg); }
+  54% { transform: rotate(-4deg); }
+  57% { transform: rotate(2deg); }
+  60% { transform: rotate(-1deg); }
+  61%, 100% { transform: rotate(0deg); }
 }

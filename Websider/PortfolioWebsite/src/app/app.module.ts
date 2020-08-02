@@ -18,19 +18,6 @@ import { ProjectItemComponent } from './components/projects/project-item/project
 import { ProjectDetailComponent } from './components/projects/project-detail/project-detail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { DatePipe } from '@angular/common';
-
-const config = {
-  apiKey: 'AIzaSyDdJ13wVetNUSW09uvIWoY94KaHrQfm30w',
-  authDomain: 'pawportfolio-b84d3.firebaseapp.com',
-  databaseURL: 'https://pawportfolio-b84d3.firebaseio.com',
-  projectId: 'pawportfolio-b84d3',
-  storageBucket: 'pawportfolio-b84d3.appspot.com',
-  messagingSenderId: '641609071420'
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,14 +37,12 @@ const config = {
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(config),
-    AngularFireDatabaseModule
+    ReactiveFormsModule
   ],
   exports: [
 
   ],
-  providers: [DatePipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

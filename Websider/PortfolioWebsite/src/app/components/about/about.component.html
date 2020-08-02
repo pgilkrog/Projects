@@ -1,33 +1,24 @@
 <div class="aboutWrapper">
-  <h1>
-    <i class="fas fa-user-tie"></i> Kontakt oplysninger
-  </h1>
-
   <div class="item1">
     <div class="aboutImage">
       <img src="../../../assets/images/CirclePaw.png" />
     </div>
-    <div class="aboutInfo">
-      <div style="padding-left: 20px;">
-        <p><strong>Navn:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>Paw Gilkrog</p>
-        <p><strong>Region:&nbsp;&nbsp;</strong>Nordjylland</p>
-        <p><strong>E-mail:&nbsp;&nbsp;&nbsp;</strong>pgilkrog@gmail.com</p>
-        <p><strong>Mobil:&nbsp;&nbsp;&nbsp;&nbsp;</strong>21 53 55 74</p>
-      </div>
-    </div>
   </div>
 
   <div class="item2">
-    <div class="aboutForm">
-      <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
-        <input type="email" formControlName="senderEmail" placeholder="Din Email..." /><br>
-        <input type="text" formControlName="subject" placeholder="Emne..." /><br>
-        <textarea type="textarea" formControlName="content" rows="10" cols="30"  draggable="false" placeholder="Din Besked..."></textarea><br>
-        <button type="submit" [disabled]="emailForm.invalid">SEND</button>
-      </form>
+    <div>
+      <h2><i class="shakeAnim fas fa-mobile-alt"></i></h2>
+      <p>21 53 55 74</p>
     </div>
+    <div>
+      <h2><i class="shakeAnim fas fa-envelope"></i></h2>
+      <p>pgilkrog@gmail.com</p>
+    </div>
+  </div>
+
+   <div class="item3">
     <div class="aboutCountry">
-      <img src="../../../assets/images/Country.png" />
+      <img src="../../../assets/images/Group23.png" />
     </div>
-  </div><br>
+  </div>
 </div>
