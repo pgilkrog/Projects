@@ -29,6 +29,7 @@ export class SkillsComponent implements OnInit  {
       'Java',
       '.Net',
       'MSSQL',
+      'NodeJS',
       'Firebase',
       'MongoDB',
       'API'

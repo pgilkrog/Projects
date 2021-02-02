@@ -1,0 +1,34 @@
+.EmployeeTableContainer {
+    background-color: #fff;
+    padding: 1rem;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.EmployeeTableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.EmployeeTableContainer td, .EmployeeTableContainer th {
+    border: 1px solid #eee;
+    padding: 8px;
+  }
+
+.EmployeeTableContainer th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ff7315;
+    color: white;
+}
+
+.EmployeeTableContainer tr:nth-child(even){
+    background-color: #ffb784;
+}
+
+.EmployeeTableContainer tr:hover {
+    background-color: #eee;
+}

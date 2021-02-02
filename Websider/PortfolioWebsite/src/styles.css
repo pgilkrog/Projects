@@ -1,16 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./assets/fronts/Roboto-Regular.ttf');
+}
 
 body {
   background: #222;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'roboto', swap, sans-serif;
   color: #eee;
   margin: 0;
   padding: 0;
 }
 
-
 i {
-  font-family: 'Roboto';
+  font-family: 'roboto';
 }
 
 .pointCurs {

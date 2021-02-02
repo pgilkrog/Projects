@@ -1,5 +1,4 @@
 .project-wrapper {
-  float: left;
   height: 300px;
   max-width: 360px;
   -moz-background-size: cover;
@@ -23,7 +22,15 @@
   border-radius: 10px;
   color: #222;
   opacity: 0;
-  transition: all 1s ease-out;
+  transition: all .8s ease-out;
+}
+
+.technologiesLine {
+  background-color: #37E691;
+  color: #222;
+  position: absolute;
+  text-align: center;
+  margin-top: 170px;
 }
 
 .project-detail:hover {

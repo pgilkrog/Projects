@@ -1,16 +1,3 @@
-i {
-  color: #fff;
-  /* text-shadow: 1px 1px #222; */
-}
-
-h4 {
-  display: inline;
-}
-
-p {
-  color: #eee;
-}
-
 .homeWrapper{
   display: flexbox;
   flex-wrap: wrap;
@@ -19,62 +6,46 @@ p {
 
 .topBanner {
   margin-top: 50px;
+  margin-bottom: 50px;
   width: 100%;
-  background: #37e691;
   display: flex;
-  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .topImage {
-  display: none;
+  margin: 0 auto;
 }
 
 .topText {
-  padding: 3rem 1rem 6rem 1rem;
-  color: #222;
-  font-weight: 800;
-  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.topText h4 {
+  color: #eee;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.topText h1 {
+  font-size: 2.4rem;
+  color: #37e691;
 }
 
 .imageScreens {
   display: none;
 }
 
-.imageScreens hr {
-  margin-top: -6px;
-  height: 5px;
-  z-index: -1;
-}
-
-.links {
-  width: 100%;
-  text-align: center;
-}
-
-.links ul {
-  list-style: none;
-}
-
+/** HOME BUTTONS **/
 .homeButtons {
-  background-color: #37e691;
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 100px;
-}
-
-.topText h4 {
-  color: #222;
-  font-weight: 900;
-  font-size: 2rem;
-}
-
-.topText h1 {
-  font-size: 2.2rem;
 }
 
 .homeButtons i {
-  color: #222;
+  color: #37e691;
   font-size: 3rem;
   padding: 1rem;
   text-shadow: none;
@@ -83,65 +54,46 @@ p {
 a:hover i {
   color: #eee;
   cursor: pointer;
-}
-
-.links {
-  display: inline-block;
-  font-style: normal;
-  font-size: 2rem;
-  color: #37e691;
-  text-align: center;
-}
-
-.links {
-  font-family: 'Roboto', sans-serif;
-}
-
-.links h4:hover{
-  cursor: pointer;
-  color: #eee;
-}
-
-.links h4:hover i {
-  color: #eee;
-  cursor: pointer;
-}
-
-.links i {
-  color: #37e691;
+  transition: 0.8s;
 }
 
 .homeButtons a {
   text-decoration: none;
-  color: #222;
+  color: #37e691;
   font-size: 3rem;
   padding: 0 2rem;
 }
 
 .homeButtons a:hover {
   color: #eee;
+  transition: 0.8s;
+}
+
+.homeButtons a
+{
+  position: relative;
+}
+
+.homeButtons a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #37e691;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.homeButtons a:hover:before {
+  background-color: #eee;
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 @media(min-width: 930px) {
-  .topImage {
-    display: initial;
-    padding-top: 50px;
-    margin-bottom: -15px;
-    margin-right: auto;
-    width: 30%;
-  }
-
-  .topText {
-    /* width: 600px;
-    margin-left: auto;
-    padding-top: 160px; */
-    text-align: center;
-  }
-
-  .backgroundSquare {
-    background-image: url('../../../assets/images/Rectangle 752.png');
-  }
-
   .imageScreens {
     display: initial;
     width: 100%;
@@ -149,19 +101,21 @@ a:hover i {
     margin-top: 10em;
   }
 
-  .links {
-    padding-top: 70px;
+  .imageScreens hr {
+    margin-top: 0;
+    height: 5px;
+    z-index: -1;
   }
 
   .coffee {
-    width: 916px;
-    height: 390px;
+    width: 914px;
+    height: 383px;
     margin: 0 auto;
     animation: play 1.2s steps(13) infinite;
-    background: url('../../../assets/images/desksmoke.png') left center;
+    background: url('../../../assets/images/deskscreen.png') left center;
     background-size: cover;
     z-index: 1;
   } @keyframes play {
-      100% { background-position: -11908px; }
+      100% { background-position: -11882px; }
   }
 }

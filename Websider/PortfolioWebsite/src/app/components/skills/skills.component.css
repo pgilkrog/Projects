@@ -1,6 +1,6 @@
 h1 {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.8rem;
 }
 
 .container {
@@ -22,7 +22,6 @@ h1 {
 
 .hejsa {
     width: 100%;
-    background-image: url('../../../assets/images/Rectangle 752.png');
     border-top: 3px solid #37e691;
     border-bottom: 3px solid #37e691;
     padding: 30px 0 30px 0;

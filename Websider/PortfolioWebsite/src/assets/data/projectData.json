@@ -153,6 +153,17 @@
       "technologies": [ ".Net", "Xamarin", "C#", "SQLite" ],
       "type": "Software",
       "github": "https://github.com/pgilkrog/Projects/tree/master/DrinkApp"
+    },
+    {
+      "id": 15,
+      "name": "React Typescript",
+      "description": "En liste over medarbejdere, med forskellige oplysninger. Der kan sorteres ved at trykke på tabel-overskrifterne, og der kan søges på de forskellige oplysninger. Søgningen sker automatisk med et lille delay.  Det er lavet i React med Typescript og en json fil med medarbejderne i.",
+      "shortDescription": "Medarbejder tabel, hvor der kan filtreres. Lavet i React med Typescript.",
+      "mainImage": "../assets/images/imgProjects/ReactTypescript.PNG",
+      "images": [ "1", "2" ],
+      "technologies": [ "React", "Typescript", "JSON" ],
+      "type": "Software",
+      "github": "https://github.com/pgilkrog/Projects/tree/master/DrinkApp"
     }
   ]
 }

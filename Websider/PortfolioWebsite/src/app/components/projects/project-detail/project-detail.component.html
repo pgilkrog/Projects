@@ -4,7 +4,7 @@
   </h1>
   <div class="container">
       <div class="imageContainer">
-        <img class="responsive" alt="Responsive image" src="{{project.mainImage}}" width="600" style="border:1px solid #37e691;" />
+        <img class="responsive" alt="Responsive image" src="{{project.mainImage}}" width="600" />
       </div>
       <div class="descriptionContainer">
         <p style="white-space: pre-line;">
@@ -12,10 +12,8 @@
         </p>
 
         <h5>Teknologier</h5>
-        <div>
-          <mat-chip-list>
-              <mat-chip  *ngFor="let item of project.technologies">{{item}}</mat-chip>
-          </mat-chip-list>
+        <div *ngFor="let item of project.technologies">
+              {{item}}
         </div>
       </div>
     <br />

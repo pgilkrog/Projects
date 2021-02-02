@@ -1,4 +1,5 @@
 .menu-nav {
+  background-color: #222;
   position: fixed;
   z-index: 4;
   height: 100vh;
@@ -39,13 +40,12 @@
 
 h1 {
   color: #eee;
-  font-family: 'Great Vibes';
   font-size: 62px;
 }
 
 
 nav a, a:focus, a:visited {
-  color: #222;
+  color: #37E691;
   font-weight: 900;
   text-decoration: none;
 }
@@ -65,15 +65,13 @@ ul li a{
 }
 
 ul:hover li a {
-  transform: scale(.9);
-  opacity: .4;
-  filter: blur(1px);
+  text-decoration: none;
+  color: #37E691;
 }
 
 ul li a:hover{
-  transform: scale(1.3);
-  opacity: 1;
-  filter: blur(0);
+  color: #eee;
+  scale: 1.2;
 }
 
 
@@ -89,7 +87,9 @@ ul li a:hover{
   right:1%;
   top: 2%;
   cursor: pointer;
-}.menu-wrapper:hover  {
+}
+
+.menu-wrapper:hover  {
   background-color: #eee;
 }
 
