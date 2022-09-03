@@ -1,0 +1,38 @@
+
+$light: #e6e6e6; 
+// $light: #e8eae3;f5f5f5;
+$dark: #373833;
+$primary: #27a6fa;
+
+// $primary:       $blue;
+// $secondary:     $gray-600;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-900;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+p, h1, h2, h3 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.card-body {
+    padding: 1rem
+}
+
+.b-icon {
+    transition: 0.5s ease-out;
+}
+
+.home {
+    .b-icon:hover {
+        filter: brightness(80%);
+        transition: .5s ease-out;
+        transform: scale(1.2);
+    }    
+}
