@@ -15,6 +15,7 @@ export class SkillsComponent implements OnInit  {
     this.skillsFrontend = [
       'Angular',
       'React',
+      'Vue',
       'Javascript',
       'Typescript',
       'HTML',

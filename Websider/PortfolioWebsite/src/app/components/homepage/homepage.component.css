@@ -6,7 +6,6 @@
 
 .topBanner {
   margin-top: 50px;
-  margin-bottom: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -98,7 +97,6 @@ a:hover i {
     display: initial;
     width: 100%;
     height: auto;
-    margin-top: 10em;
   }
 
   .imageScreens hr {

@@ -31,13 +31,14 @@ p
 	font-size: 14px;
 }
 
-.LittleMenu
+.LittleMenu 
 {
-	Text-align: center;
-	margin-top: 3px;
-	color: White;
-	font-size: 16px;	
-	font-family: Arial;
+    Text-align: center;
+    margin-top: 3px;
+    color: White;
+    font-size: 16px;
+    font-family: Arial;
+    padding-top: 3px;
 }
 
 .RightBox p
